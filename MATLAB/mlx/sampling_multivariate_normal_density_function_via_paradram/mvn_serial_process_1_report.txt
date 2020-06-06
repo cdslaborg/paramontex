@@ -107,10 +107,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 43,732 MB
+Available Physical Memory: 37,567 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 50,760 MB
-Virtual Memory: In Use:    24,353 MB
+Virtual Memory: Available: 44,010 MB
+Virtual Memory: In Use:    31,103 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-OSS-ARDC-1
@@ -1085,14 +1085,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                     Starting ParaDRAM sampling - 2020/06/06 - 02:59:14                                     ****
+****                                     Starting ParaDRAM sampling - 2020/06/06 - 14:41:33                                     ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                     Exiting ParaDRAM sampling - 2020/06/06 - 02:59:17                                      ****
+****                                     Exiting ParaDRAM sampling - 2020/06/06 - 14:41:37                                      ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1122,19 +1122,19 @@ MCMC sampling efficiency (including delayed rejections, if any requested) [ = ac
  
  
 Total runtime in seconds:
-2.71499991416931
+4.72300004959106
  
  
 Average effective time cost of each accepted function call, in seconds:
-9.049999713897705E-005
+1.574333349863688E-004
  
  
 Average effective time cost of each accepted or rejected function call, in seconds:
-2.444074280208229E-005
+4.251699193942534E-005
  
  
 Average effective time cost of each accepted or rejected or unused function call (including delayed-rejections, if any requested), in seconds:
-2.444074280208229E-005
+4.251699193942534E-005
  
  
 Average time cost of inter-process communications per used (accepted or rejected or delayed-rejection) function call, in seconds:
@@ -1142,7 +1142,7 @@ UNDEFINED
  
  
 Average pure time cost of each function call, in seconds:
-1.739209287531569E-005
+3.141741321867805E-005
  
  
 Number of processes (images):
