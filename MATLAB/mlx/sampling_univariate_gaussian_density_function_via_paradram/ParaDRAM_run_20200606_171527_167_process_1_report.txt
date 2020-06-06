@@ -107,10 +107,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 42,522 MB
+Available Physical Memory: 35,034 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 49,200 MB
-Virtual Memory: In Use:    25,913 MB
+Virtual Memory: Available: 41,357 MB
+Virtual Memory: In Use:    33,756 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-OSS-ARDC-1
@@ -165,7 +165,7 @@ Data Execution Prevention Available: Yes
  
  
         ParaDRAM - NOTE: Variable outputFileName detected among the input variables to ParaDRAM:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
         ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx
@@ -174,17 +174,17 @@ Data Execution Prevention Available: Yes
         ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: ParaDRAM output files will be prefixed with:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167
  
  
  
         ParaDRAM - NOTE: Generating the output progress file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655_process_1_progress.txt
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167_process_1_progress.txt
  
  
  
         ParaDRAM - NOTE: Generating the output chainfile:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655_process_1_chain.txt
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167_process_1_chain.txt
  
  
  
@@ -357,7 +357,7 @@ mpiFinalizeRequested
 
 outputFileName
 
-        D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655
+        D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167
  
         ParaDRAM - NOTE: outputFileName contains the path and the base of the filename for ParaDRAM output files. If not 
         ParaDRAM - NOTE: provided by the user, the default outputFileName is constructed from the current date and time:
@@ -1061,14 +1061,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                     Starting ParaDRAM sampling - 2020/06/06 - 13:25:34                                     ****
+****                                     Starting ParaDRAM sampling - 2020/06/06 - 17:15:32                                     ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                     Exiting ParaDRAM sampling - 2020/06/06 - 13:25:34                                      ****
+****                                     Exiting ParaDRAM sampling - 2020/06/06 - 17:15:32                                      ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1098,19 +1098,19 @@ MCMC sampling efficiency (including delayed rejections, if any requested) [ = ac
  
  
 Total runtime in seconds:
-0.597000122070312
+0.500999927520752
  
  
 Average effective time cost of each accepted function call, in seconds:
-1.194000244140625E-004
+1.001999855041504E-004
  
  
 Average effective time cost of each accepted or rejected function call, in seconds:
-6.303453933801208E-005
+5.289831353824854E-005
  
  
 Average effective time cost of each accepted or rejected or unused function call (including delayed-rejections, if any requested), in seconds:
-6.303453933801208E-005
+5.289831353824854E-005
  
  
 Average time cost of inter-process communications per used (accepted or rejected or delayed-rejection) function call, in seconds:
@@ -1118,7 +1118,7 @@ UNDEFINED
  
  
 Average pure time cost of each function call, in seconds:
-2.956390380859375E-005
+2.618506118118694E-005
  
  
 Number of processes (images):
@@ -1233,7 +1233,7 @@ Effective sampling efficiency ( = effectiveSampleSize / acceptedPlusRejectedFunc
  
  
         ParaDRAM - NOTE: Generating the output sample file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_132528_655_process_1_sample.txt
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200606_171527_167_process_1_sample.txt
  
  
  
