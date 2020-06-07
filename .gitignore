@@ -175,5 +175,6 @@ _deps
 # documentation
 #########################
 
+*.html
 **/docs/*
 **/doc/*
