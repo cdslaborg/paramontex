@@ -130,6 +130,7 @@ build.m
 #*_restart.txt
 #*_restart.bin
 #*_progress.txt
+temp_*
 *.stderr
 *.temp
 *.rfn
