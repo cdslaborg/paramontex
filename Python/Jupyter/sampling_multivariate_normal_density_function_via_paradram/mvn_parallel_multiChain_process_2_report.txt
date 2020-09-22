@@ -93,7 +93,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          8/31/2020, 10:24:20 PM
+System Boot Time:          9/19/2020, 1:38:47 PM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -107,21 +107,22 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 42,333 MB
+Available Physical Memory: 45,669 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 48,939 MB
-Virtual Memory: In Use:    26,174 MB
+Virtual Memory: Available: 53,443 MB
+Virtual Memory: In Use:    21,670 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
-Hotfix(s):                 7 Hotfix(s) Installed.
-[01]: KB4569751
+Hotfix(s):                 8 Hotfix(s) Installed.
+[01]: KB4576484
 [02]: KB4517245
 [03]: KB4560959
 [04]: KB4561600
 [05]: KB4565554
 [06]: KB4569073
-[07]: KB4565351
+[07]: KB4576751
+[08]: KB4574727
 Network Card(s):           5 NIC(s) Installed.
 [01]: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
 Connection Name: Ethernet 2
@@ -163,7 +164,7 @@ Data Execution Prevention Available: Yes
         ParaDRAM - NOTE: ./sampling_multivariate_normal_density_function_via_paradram/mvn_parallel_multiChain
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\fb\paramontex\Python\Jupyter
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
         ParaDRAM - NOTE: .\sampling_multivariate_normal_density_function_via_paradram\
@@ -1090,14 +1091,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/09/05 - 04:50:59                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/09/21 - 15:21:48                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/09/05 - 04:51:03                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/09/21 - 15:21:56                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1167,28 +1168,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        4.258000135421753
+        7.920000076293945
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .1419333378473918E-03
+        .2640000025431315E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1357045012404549E-04
+        .2524141911684975E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1357045012404549E-04
+        .2524141911684975E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1196,7 +1197,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1357045012404549E-04
+        .2524141911684975E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1212,7 +1213,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .1042165320678754E-04
+        .1953342439081479E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
