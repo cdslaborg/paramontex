@@ -9,7 +9,7 @@
 ****                                                                                                                            ****
 ****                                                       Version 1.2.0                                                        ****
 ****                                                                                                                            ****
-****                                              Build: Fri Sep 04 23:31:27 2020                                               ****
+****                                              Build: Tue Sep 22 07:16:38 2020                                               ****
 ****                                                                                                                            ****
 ****                                                   Department of Physics                                                    ****
 ****                                              Computational & Data Science Lab                                              ****
@@ -106,10 +106,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 45,669 MB
+Available Physical Memory: 43,327 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 53,443 MB
-Virtual Memory: In Use:    21,670 MB
+Virtual Memory: Available: 51,173 MB
+Virtual Memory: In Use:    23,940 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -125,7 +125,11 @@ Hotfix(s):                 8 Hotfix(s) Installed.
 Network Card(s):           5 NIC(s) Installed.
 [01]: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
 Connection Name: Ethernet 2
-Status:          Hardware not present
+DHCP Enabled:    No
+IP address(es)
+[01]: 129.107.211.30
+[02]: fe80::a00e:774f:8d77:50bb
+[03]: fe80::6a29:427c:5bd8:2bf5
 [02]: ExpressVPN TAP Adapter
 Connection Name: Ethernet 3
 Status:          Media disconnected
@@ -823,7 +827,30 @@ sampleRefinementMethod
         ParaDRAM - NOTE:             Oper. Res. 30 556-568. The batch sizes in the BatchMeans method are chosen to be int(N^(2/3)) 
         ParaDRAM - NOTE:             where N is the length of the MCMC chain. As long as the batch size is larger than the 
         ParaDRAM - NOTE:             IAC of the chain and there are significantly more than 10 batches, the BatchMeans method 
-        ParaDRAM - NOTE:             will provide reliable estimates of the IAC.
+        ParaDRAM - NOTE:             will provide reliable estimates of the IAC. Note that the refinement strategy involves 
+        ParaDRAM - NOTE:             two separate phases of sample decorrelation. At the first stage, the Markov chain is 
+        ParaDRAM - NOTE:             decorrelated recursively (for as long as needed) based on the IAC of its compact format, 
+        ParaDRAM - NOTE:             where only the the uniquely-visited states are kept in the (compact) chain. Once the 
+        ParaDRAM - NOTE:             Markov chain is refined such that its compact format is fully decorrelated, the second 
+        ParaDRAM - NOTE:             phase of the decorrelation begins during which the Markov chain is decorrelated based on 
+        ParaDRAM - NOTE:             the IAC of the chain in its verbose (Markov) format. This process is repeated recursively 
+        ParaDRAM - NOTE:             for as long as there is any residual autocorrelation in the refined sample.
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-compact'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:             This is the same as the first case in the above, except that only the first phase of the 
+        ParaDRAM - NOTE:             sample refinement described in the above will be performed, that is, the (verbose) Markov 
+        ParaDRAM - NOTE:             chain is refined only based on the IAC computed from the compact format of the Markov 
+        ParaDRAM - NOTE:             chain. This will lead to a larger final refined sample. However, the final sample will 
+        ParaDRAM - NOTE:             likely not be fully decorrelated.
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-verbose'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:             This is the same as the first case in the above, except that only the second phase of 
+        ParaDRAM - NOTE:             the sample refinement described in the above will be performed, that is, the (verbose) 
+        ParaDRAM - NOTE:             Markov chain is refined only based on the IAC computed from the verbose format of the 
+        ParaDRAM - NOTE:             Markov chain. While the resulting refined sample will be fully decorrelated, the size of 
+        ParaDRAM - NOTE:             the refined sample may be smaller than the default choice in the first case in the above.
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Note that in order to obtain i.i.d. samples from a multidimensional chain, ParaDRAM will use the 
         ParaDRAM - NOTE: maximum of IAC among all dimensions of the chain to refine the chain. Also, note that the value 
@@ -1089,14 +1116,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/09/21 - 13:56:35                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/09/25 - 03:36:40                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/09/21 - 13:56:37                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/09/25 - 03:36:42                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1166,28 +1193,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        2.447000026702881
+        2.150000095367432
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .8156666755676270E-04
+        .7166666984558105E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .2351189072018142E-04
+        .2065818011402769E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .2351189072018142E-04
+        .2065818011402769E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1195,7 +1222,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .2351189072018142E-04
+        .2065818011402769E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1211,7 +1238,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .1391302700258063E-04
+        .1136676239446181E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1229,7 +1256,7 @@ stats.parallelism.processContribution
  
         ParaDRAM - NOTE: These are contributions of individual processes to the construction of the MCMC chain. Essentially, 
         ParaDRAM - NOTE: they represent the total number of accepted states by the corresponding processor, starting from the 
-        ParaDRAM - NOTE: first processor to the last. This information is mostly informative in parallel Fork-Join (singlChain) 
+        ParaDRAM - NOTE: first processor to the last. This information is mostly informative in parallel Fork-Join (singleChain) 
         ParaDRAM - NOTE: simulations.
  
 
