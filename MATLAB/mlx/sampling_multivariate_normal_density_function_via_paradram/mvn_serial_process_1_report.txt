@@ -9,7 +9,7 @@
 ****                                                                                                                            ****
 ****                                                       Version 1.2.0                                                        ****
 ****                                                                                                                            ****
-****                                              Build: Sun Sep 20 03:32:33 2020                                               ****
+****                                              Build: Tue Sep 22 07:08:13 2020                                               ****
 ****                                                                                                                            ****
 ****                                                   Department of Physics                                                    ****
 ****                                              Computational & Data Science Lab                                              ****
@@ -69,11 +69,11 @@ Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
-/I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\MATLAB\mod /I:C:\Program Fil
-es\MATLAB\R2019a\extern\include /nologo /standard-semantics /F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays 
-/fpp /define:PARAMONTE_VERSION='1.2.0' /define:CFI_ENABLED /define:MATLAB_ENABLED /define:OS_IS_WINDOWS /define:IFORT_ENABLED /defin
-e:DLL_ENABLED /define:MEXPRINT_ENABLED /define:MATLAB_MEX_FILE /threads /libs:static /module:D:\Dropbox\Projects\20180101_ParaMonte\
-git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\MATLAB\mod /c
+/I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\testing\dynamic\heap\serial\MATLAB\mod /I:C:\Program Fil
+es\MATLAB\R2019a\extern\include /nologo /standard-semantics /F0x1000000000 /Od /heap-arrays /fpp /define:PARAMONTE_VERSION='1.2.0' /
+define:CFI_ENABLED /define:MATLAB_ENABLED /define:OS_IS_WINDOWS /define:IFORT_ENABLED /define:DLL_ENABLED /define:MEXPRINT_ENABLED /
+define:MATLAB_MEX_FILE /threads /libs:static /module:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\testin
+g\dynamic\heap\serial\MATLAB\mod /c
  
  
 ************************************************************************************************************************************
@@ -93,7 +93,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          9/19/2020, 1:38:47 PM
+System Boot Time:          9/26/2020, 2:41:22 PM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -107,10 +107,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 47,974 MB
+Available Physical Memory: 39,496 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 55,703 MB
-Virtual Memory: In Use:    19,410 MB
+Virtual Memory: Available: 46,440 MB
+Virtual Memory: In Use:    28,673 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -160,7 +160,7 @@ Data Execution Prevention Available: Yes
         ParaDRAM - NOTE: ./sampling_multivariate_normal_density_function_via_paradram/mvn_serial
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx
+        ParaDRAM - NOTE: C:\Users\shahmoradia\AppData\Local\Temp\Editor
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
         ParaDRAM - NOTE: .\sampling_multivariate_normal_density_function_via_paradram\
@@ -1109,14 +1109,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/09/20 - 17:18:39                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/09/29 - 01:49:09                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/09/20 - 17:18:47                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/09/29 - 01:49:19                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1186,28 +1186,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        7.528999805450439
+        10.30299997329712
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .1505799961090088E-03
+        .2060599994659424E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .4492913504669813E-04
+        .6148291793702593E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .4492913504669813E-04
+        .6148291793702593E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1215,7 +1215,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .4492913504669813E-04
+        .6148291793702593E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1231,7 +1231,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .3011191440805933E-04
+        .4153959612054610E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
