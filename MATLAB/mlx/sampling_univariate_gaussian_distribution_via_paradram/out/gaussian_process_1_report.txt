@@ -157,26 +157,26 @@ Data Execution Prevention Available: Yes
  
  
         ParaDRAM - NOTE: Variable outputFileName detected among the input variables to ParaDRAM:
-        ParaDRAM - NOTE: ./out/mvn_serial
+        ParaDRAM - NOTE: out/gaussian
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_multivariate_normal_distribution_via_paradram
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\MATLAB\mlx\sampling_univariate_gaussian_distribution_via_paradram
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
-        ParaDRAM - NOTE: .\out\
+        ParaDRAM - NOTE: out\
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: ParaDRAM output files will be prefixed with:
-        ParaDRAM - NOTE: .\out\mvn_serial
+        ParaDRAM - NOTE: out\gaussian
  
  
  
         ParaDRAM - NOTE: Generating the output progress file:
-        ParaDRAM - NOTE: .\out\mvn_serial_process_1_progress.txt
+        ParaDRAM - NOTE: out\gaussian_process_1_progress.txt
  
  
  
         ParaDRAM - NOTE: Generating the output chainfile:
-        ParaDRAM - NOTE: .\out\mvn_serial_process_1_chain.txt
+        ParaDRAM - NOTE: out\gaussian_process_1_chain.txt
  
  
  
@@ -189,7 +189,7 @@ Data Execution Prevention Available: Yes
 
 ndim
 
-        4
+        1
  
         ParaDRAM - NOTE: ndim is a 32-bit positive integer, representing the number of dimensions of the domain of the objective 
         ParaDRAM - NOTE: function. It is the only simulation specification variable that the user must always provide along 
@@ -249,10 +249,7 @@ silentModeRequested
 
 domainLowerLimitVec
 
-        -.1000000000000000E+301
-        -.1000000000000000E+301
-        -.1000000000000000E+301
-        -.1000000000000000E+301
+        -.1797693134862316E+308
  
         ParaDRAM - NOTE: domainLowerLimitVec represents the lower boundaries of the cubical domain of the objective function 
         ParaDRAM - NOTE: to be sampled. It is an ndim-dimensional vector of 64-bit real numbers, where ndim is the number of 
@@ -283,10 +280,7 @@ domainLowerLimitVec
 
 domainUpperLimitVec
 
-        .1000000000000000E+301
-        .1000000000000000E+301
-        .1000000000000000E+301
-        .1000000000000000E+301
+        .1797693134862316E+308
  
         ParaDRAM - NOTE: domainUpperLimitVec represents the upper boundaries of the cubical domain of the objective function 
         ParaDRAM - NOTE: to be sampled. It is an ndim-dimensional vector of 64-bit real numbers, where ndim is the number of 
@@ -316,9 +310,6 @@ domainUpperLimitVec
 variableNameList
 
         SampleVariable1                                                
-        SampleVariable2                                                
-        SampleVariable3                                                
-        SampleVariable4                                                
  
         ParaDRAM - NOTE: variableNameList contains the names of the variables to be sampled by ParaDRAM. It is used to construct 
         ParaDRAM - NOTE: the header of the output sample file. Any element of variableNameList that is not set by the user 
@@ -373,7 +364,7 @@ mpiFinalizeRequested
 
 outputFileName
 
-        .\out\mvn_serial
+        out\gaussian
  
         ParaDRAM - NOTE: outputFileName contains the path and the base of the filename for ParaDRAM output files. If not 
         ParaDRAM - NOTE: provided by the user, the default outputFileName is constructed from the current date and time:
@@ -470,10 +461,10 @@ sampleSize
 
 randomSeed
 
-        3751
+        31951
 
         ThisProcessID RandomSeedVectorSize RandomSeedVectorValues
-        1 2 1421007875 1697917846
+        1 2 1059855292 1588529419
 
         OtherProcessID RandomSeedVectorSize RandomSeedVectorValues
         No other processor exists.
@@ -579,7 +570,7 @@ chainFileFormat
 
 restartFileFormat
 
-        ascii
+        binary
  
         ParaDRAM - NOTE: restartFileFormat is a string variable that represents the format of the output restart file(s) which 
         ParaDRAM - NOTE: are used to restart an interrupted ParaDRAM simulation. The string value must be enclosed by either 
@@ -642,7 +633,7 @@ maxNumDomainCheckToStop
 
 chainSize
 
-        50000
+        5000
  
         ParaDRAM - NOTE: chainSize determines the number of non-refined, potentially auto-correlated, but unique, samples 
         ParaDRAM - NOTE: drawn by the MCMC sampler before stopping ParaDRAM. For example, if you specify chainSize = 10000, 
@@ -655,10 +646,7 @@ chainSize
 
 randomStartPointDomainLowerLimitVec
 
-        -.1000000000000000E+301
-        -.1000000000000000E+301
-        -.1000000000000000E+301
-        -.1000000000000000E+301
+        -.1797693134862316E+308
  
         ParaDRAM - NOTE: RandomStartPointDomainLowerLimitVec represents the lower boundaries of the cubical domain from which 
         ParaDRAM - NOTE: the starting point(s) of the MCMC chain(s) will be initialized randomly (only if requested via the 
@@ -697,10 +685,7 @@ randomStartPointDomainLowerLimitVec
 
 randomStartPointDomainUpperLimitVec
 
-        .1000000000000000E+301
-        .1000000000000000E+301
-        .1000000000000000E+301
-        .1000000000000000E+301
+        .1797693134862316E+308
  
         ParaDRAM - NOTE: randomStartPointDomainUpperLimitVec represents the upper boundaries of the cubical domain from which 
         ParaDRAM - NOTE: the starting point(s) of the MCMC chain(s) will be initialized randomly (only if requested via the 
@@ -740,9 +725,6 @@ randomStartPointDomainUpperLimitVec
 startPointVec
 
         .000000000000000
-        .000000000000000
-        .000000000000000
-        .000000000000000
  
         ParaDRAM - NOTE: startPointVec is a 64bit real-valued vector of length ndim (the dimension of the domain of the input 
         ParaDRAM - NOTE: objective function). For every element of startPointVec that is not provided as input, the default 
@@ -772,7 +754,7 @@ randomStartPointRequested
 
 sampleRefinementCount
 
-        1
+        1073741823
  
         ParaDRAM - NOTE: When sampleSize < 0, the variable sampleRefinementCount is an integer that dictates the maximum number 
         ParaDRAM - NOTE: of times the MCMC chain will be refined to remove the autocorrelation within the output MCMC sample. 
@@ -952,9 +934,6 @@ proposalModel
 proposalStartStdVec
 
         1.000000000000000
-        1.000000000000000
-        1.000000000000000
-        1.000000000000000
  
         ParaDRAM - NOTE: proposalStartStdVec is a real-valued positive vector of length ndim, where ndim is the dimension of 
         ParaDRAM - NOTE: the sampling space. It serves as the best-guess starting Standard Deviation of each of the components 
@@ -971,10 +950,7 @@ proposalStartStdVec
 
 proposalStartCorMat
 
-        1.000000000000000 .000000000000000 .000000000000000 .000000000000000
-        .000000000000000 1.000000000000000 .000000000000000 .000000000000000
-        .000000000000000 .000000000000000 1.000000000000000 .000000000000000
-        .000000000000000 .000000000000000 .000000000000000 1.000000000000000
+        1.000000000000000
  
         ParaDRAM - NOTE: proposalStartCorMat is a real-valued positive-definite matrix of size (ndim,ndim), where ndim is the 
         ParaDRAM - NOTE: dimension of the sampling space. It serves as the best-guess starting correlation matrix of the 
@@ -990,10 +966,7 @@ proposalStartCorMat
 
 proposalStartCovMat
 
-        1.000000000000000 .000000000000000 .000000000000000 .000000000000000
-        .000000000000000 1.000000000000000 .000000000000000 .000000000000000
-        .000000000000000 .000000000000000 1.000000000000000 .000000000000000
-        .000000000000000 .000000000000000 .000000000000000 1.000000000000000
+        1.000000000000000
  
         ParaDRAM - NOTE: proposalStartCovMat is a real-valued positive-definite matrix of size (ndim,ndim), where ndim is the 
         ParaDRAM - NOTE: dimension of the sampling space. It serves as the best-guess starting covariance matrix of the proposal 
@@ -1008,7 +981,7 @@ proposalStartCovMat
 
 adaptiveUpdatePeriod
 
-        16
+        4
  
         ParaDRAM - NOTE: Every adaptiveUpdatePeriod calls to the objective function, the parameters of the proposal distribution 
         ParaDRAM - NOTE: will be updated. The variable adaptiveUpdatePeriod must be a positive integer (>0). The smaller the 
@@ -1022,7 +995,7 @@ adaptiveUpdatePeriod
         ParaDRAM - NOTE: of the proposal distribution to the global structure of the objective function that is being sampled. 
         ParaDRAM - NOTE: If adaptiveUpdatePeriod>=chainSize, then no adaptive updates to the proposal distribution will be 
         ParaDRAM - NOTE: made. The default value is 4 * ndim, where ndim is the dimension of the domain of the objective 
-        ParaDRAM - NOTE: function to be sampled. In this particular ParaDRAM simulation, this corresponds to the value 16.
+        ParaDRAM - NOTE: function to be sampled. In this particular ParaDRAM simulation, this corresponds to the value 4.
  
  
 
@@ -1115,7 +1088,7 @@ delayedRejectionScaleFactorVec
         ParaDRAM - NOTE: of the DR process, the proposal distribution from the last stage is scaled by the factor 
         ParaDRAM - NOTE: delayedRejectionScaleFactorVec(i). Missing elements of the delayedRejectionScaleFactorVec in the 
         ParaDRAM - NOTE: input to ParaDRAM will be set to the default value. The default value at all stages is 0.5^(1/ndim) 
-        ParaDRAM - NOTE: = 0.840896415253715, which reduces the volume of the covariance matrix of the proposal from the last 
+        ParaDRAM - NOTE: = 0.500000000000000, which reduces the volume of the covariance matrix of the proposal from the last 
         ParaDRAM - NOTE: DR stage by one half. The variable ndim represents the number of dimensions of the Domain of the 
         ParaDRAM - NOTE: objective function.
  
@@ -1123,35 +1096,35 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/04 - 03:16:29                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/04 - 03:25:27                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 03:16:35                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 03:25:28                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
 
 stats.numFuncCall.accepted
 
-        50000
+        5000
  
         ParaDRAM - NOTE: This is the total number of accepted function calls (unique samples).
  
 
 stats.numFuncCall.acceptedRejected
 
-        167575
+        9713
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected function calls.
  
 
 stats.numFuncCall.acceptedRejectedDelayed
 
-        167575
+        9713
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or delayed-rejection (if any requested) function 
         ParaDRAM - NOTE: calls.
@@ -1159,7 +1132,7 @@ stats.numFuncCall.acceptedRejectedDelayed
 
 stats.numFuncCall.acceptedRejectedDelayedUnused
 
-        167575
+        9713
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or unused function calls (by all processes, including 
         ParaDRAM - NOTE: delayed rejections, if any requested).
@@ -1167,14 +1140,14 @@ stats.numFuncCall.acceptedRejectedDelayedUnused
 
 stats.chain.verbose.efficiency.meanAcceptanceRate
 
-        .2978705727559799
+        .5100475212015101
  
         ParaDRAM - NOTE: This is the average MCMC acceptance rate.
  
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
-        .2983738624496494
+        .5147740142077628
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted and rejected function calls, that is, the 
         ParaDRAM - NOTE: number of accepted function calls divided by the number of (accepted + rejected) function calls.
@@ -1182,7 +1155,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
-        .2983738624496494
+        .5147740142077628
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, and delayed-rejection (if any 
         ParaDRAM - NOTE: requested) function calls, that is, the number of accepted function calls divided by the number of 
@@ -1191,7 +1164,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
-        .2983738624496494
+        .5147740142077628
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if any requested), 
         ParaDRAM - NOTE: and unused function calls, that is, the number of accepted function calls divided by the number of 
@@ -1200,28 +1173,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        5.096999883651733
+        .2920000553131104
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .1019399976730347E-03
+        .5840001106262207E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .3041623084381163E-04
+        .3006280812448372E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .3041623084381163E-04
+        .3006280812448372E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1229,7 +1202,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .3041623084381163E-04
+        .3006280812448372E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1245,7 +1218,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .2084438540802844E-04
+        .1534038108936437E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1259,7 +1232,7 @@ stats.parallelism.current.numProcess
 
 stats.parallelism.processContribution
 
-        50000
+        5000
  
         ParaDRAM - NOTE: These are contributions of individual processes to the construction of the MCMC chain. Essentially, 
         ParaDRAM - NOTE: they represent the total number of accepted states by the corresponding processor, starting from the 
@@ -1350,7 +1323,7 @@ stats.parallelism.optimal.absolute.scaling.strong.speedup
 
 stats.chain.compact.burnin.location.likelihoodBased
 
-        25
+        1
  
         ParaDRAM - NOTE: This is the burnin location in the compact chain, based on the occurrence likelihood.
  
@@ -1365,7 +1338,7 @@ stats.chain.compact.burnin.location.adaptationBased
 
 stats.chain.verbose.burnin.location.likelihoodBased
 
-        189
+        1
  
         ParaDRAM - NOTE: This is the burnin location in the verbose (Markov) chain, based on the occurrence likelihood.
  
@@ -1380,29 +1353,29 @@ stats.chain.verbose.burnin.location.adaptationBased
 
 stats.chain.verbose.logFunc.max
 
-        -2.570574443457217
+        -.9189385332046727
  
         ParaDRAM - NOTE: This is the maximum logFunc value (the maximum of the user-specified objective function).
  
 
 stats.chain.compact.logFunc.max.location
 
-        44144
+        1
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the compact chain.
  
 
 stats.chain.verbose.logFunc.max.location
 
-        149542
+        1
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the verbose (Markov) chain.
  
 
 stats.chain.verbose.logFunc.max.state
 
-                 SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                -0.99540114E+001         0.15044161E+002         0.20052630E+002         0.27505924E-001
+                 SampleVariable1
+                 0.00000000E+000
  
         ParaDRAM - NOTE: This is the coordinates, within the domain of the user-specified objective function, where the maximum 
         ParaDRAM - NOTE: logFunc occurs.
@@ -1417,7 +1390,7 @@ stats.chain.verbose.logFunc.max.state
 
 stats.chain.verbose.length.burninExcluded
 
-        167387
+        9713
  
         ParaDRAM - NOTE: This is the length of the verbose (Markov) Chain excluding burnin.
  
@@ -1425,58 +1398,49 @@ stats.chain.verbose.length.burninExcluded
 stats.chain.verbose.avgStd
 
                     variableName                    Mean      Standard Deviation
-                 SampleVariable1        -0.10015681E+002         0.10010366E+001
-                 SampleVariable2         0.14991219E+002         0.10015704E+001
-                 SampleVariable3         0.20016327E+002         0.10080441E+001
-                 SampleVariable4         0.18199232E-001         0.10127439E+001
+                 SampleVariable1        -0.15950949E-001         0.10239829E+001
  
         ParaDRAM - NOTE: This is the mean and standard deviation of the verbose (Markov) chain variables.
  
 
 stats.chain.verbose.covmat
 
-                                         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10020743E+001         0.45503121E+000        -0.29881044E+000         0.14401820E-002
-                 SampleVariable2         0.45503121E+000         0.10031432E+001         0.29955471E+000        -0.19456840E+000
-                 SampleVariable3        -0.29881044E+000         0.29955471E+000         0.10161530E+001         0.62375628E+000
-                 SampleVariable4         0.14401820E-002        -0.19456840E+000         0.62375628E+000         0.10256503E+001
+                                         SampleVariable1
+                 SampleVariable1         0.10485411E+001
  
         ParaDRAM - NOTE: This is the covariance matrix of the verbose (Markov) chain.
  
 
 stats.chain.verbose.cormat
 
-                                         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10000000E+001         0.45384730E+000        -0.29611898E+000         0.14205867E-002
-                 SampleVariable2         0.45384730E+000         0.10000000E+001         0.29669836E+000        -0.19181881E+000
-                 SampleVariable3        -0.29611898E+000         0.29669836E+000         0.10000000E+001         0.61099230E+000
-                 SampleVariable4         0.14205867E-002        -0.19181881E+000         0.61099230E+000         0.10000000E+001
+                                         SampleVariable1
+                 SampleVariable1         0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the verbose (Markov) chain.
  
 
 stats.chain.verbose.quantile
 
-                        Quantile         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                              Q0        -0.14050011E+002         0.10918735E+002         0.16162112E+002        -0.41573727E+001
-                              Q5        -0.11650758E+002         0.13348202E+002         0.18358630E+002        -0.16604927E+001
-                             Q10        -0.11294774E+002         0.13703383E+002         0.18729076E+002        -0.12746245E+001
-                             Q25        -0.10690794E+002         0.14313142E+002         0.19332182E+002        -0.66862509E+000
-                             Q50        -0.10014551E+002         0.14994936E+002         0.20015441E+002         0.23168414E-001
-                             Q75        -0.93382090E+001         0.15661042E+002         0.20699933E+002         0.69798616E+000
-                             Q90        -0.87445305E+001         0.16279631E+002         0.21311622E+002         0.13198259E+001
-                             Q95        -0.83726817E+001         0.16634939E+002         0.21664348E+002         0.16827196E+001
-                            Q100        -0.56488621E+001         0.19208603E+002         0.25100979E+002         0.47332860E+001
+                        Quantile         SampleVariable1
+                              Q0        -0.37425525E+001
+                              Q5        -0.17025275E+001
+                             Q10        -0.13603582E+001
+                             Q25        -0.70742202E+000
+                             Q50        -0.77917302E-002
+                             Q75         0.67903757E+000
+                             Q90         0.12540187E+001
+                             Q95         0.16384180E+001
+                            Q100         0.38765239E+001
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the verbose (Markov) chain.
  
 
 stats.chain.refined.iac
 
-                 RefinementStage              SampleSize       IAC_SampleLogFunc     IAC_SampleVariable1     IAC_SampleVariable2     IAC_SampleVariable3     IAC_SampleVariable4
-                               0                  167575         0.50737665E+001         0.57598540E+001         0.42269962E+001         0.45034541E+001         0.33607592E+001
-                               1                   29060         0.27810704E+001         0.27733284E+001         0.30451755E+001         0.27775248E+001         0.28197030E+001
-                               2                    9542         0.12592202E+001         0.93530189E+000         0.87479712E+000         0.16074652E+001         0.14373274E+001
+                 RefinementStage              SampleSize       IAC_SampleLogFunc     IAC_SampleVariable1
+                               0                    9713         0.23642828E+001         0.25073198E+001
+                               1                    3873         0.36167708E+001         0.32677233E+001
+                               2                    1070         0.11394131E+001         0.14273874E+001
  
         ParaDRAM - NOTE: This is the table of the Integrated Autocorrelation (IAC) of individual variables in the verbose 
         ParaDRAM - NOTE: (Markov) chain, at increasing stages of chain refinements.
@@ -1484,14 +1448,14 @@ stats.chain.refined.iac
 
 stats.chain.refined.ess
 
-        9542
+        1070
  
         ParaDRAM - NOTE: This is the estimated Effective (decorrelated) Sample Size (ESS) of the final refined chain.
  
 
 stats.chain.refined.efficiency.essOverAccepted
 
-        .1908400000000000
+        .2140000000000000
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted function calls, that is, the final 
         ParaDRAM - NOTE: refined effective sample size (ESS) divided by the number of accepted function calls.
@@ -1499,7 +1463,7 @@ stats.chain.refined.efficiency.essOverAccepted
 
 stats.chain.refined.efficiency.essOverAcceptedRejected
 
-        .5694166790989109E-01
+        .1101616390404612
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted and rejected function calls, that 
         ParaDRAM - NOTE: is, the final refined effective sample size (ESS) divided by the number of (accepted + rejected) 
@@ -1508,7 +1472,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejected
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
-        .5694166790989109E-01
+        .1101616390404612
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, and delayed-rejection 
         ParaDRAM - NOTE: (if any requested) function calls, that is, the final refined effective sample size (ESS) divided by 
@@ -1517,7 +1481,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
-        .5694166790989109E-01
+        .1101616390404612
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if 
         ParaDRAM - NOTE: any requested), and unused function calls, that is, the final refined effective sample size (ESS) 
@@ -1525,7 +1489,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
  
  
         ParaDRAM - NOTE: Generating the output sample file:
-        ParaDRAM - NOTE: .\out\mvn_serial_process_1_sample.txt
+        ParaDRAM - NOTE: out\gaussian_process_1_sample.txt
  
  
  
@@ -1538,7 +1502,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
 stats.chain.refined.length
 
-        9542
+        1070
  
         ParaDRAM - NOTE: This is the final output refined sample size. 
  
@@ -1546,48 +1510,39 @@ stats.chain.refined.length
 stats.chain.refined.avgStd
 
                     variableName                    Mean      Standard Deviation
-                 SampleVariable1        -0.10006232E+002         0.10055255E+001
-                 SampleVariable2         0.14988938E+002         0.10000287E+001
-                 SampleVariable3         0.20008331E+002         0.10105342E+001
-                 SampleVariable4         0.17160451E-001         0.10138797E+001
+                 SampleVariable1        -0.64383462E-002         0.10240188E+001
  
         ParaDRAM - NOTE: This is the Mean and standard deviation table of the final output refined sample.
  
 
 stats.chain.refined.covmat
 
-                                         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10110816E+001         0.44938509E+000        -0.31100110E+000        -0.13522665E-002
-                 SampleVariable2         0.44938509E+000         0.10000573E+001         0.29176516E+000        -0.20901211E+000
-                 SampleVariable3        -0.31100110E+000         0.29176516E+000         0.10211794E+001         0.62044070E+000
-                 SampleVariable4        -0.13522665E-002        -0.20901211E+000         0.62044070E+000         0.10279521E+001
+                                         SampleVariable1
+                 SampleVariable1         0.10486145E+001
  
         ParaDRAM - NOTE: This is the covariance matrix of the final output refined sample.
  
 
 stats.chain.refined.cormat
 
-                                         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10000000E+001         0.44690284E+000        -0.30606792E+000        -0.13264252E-002
-                 SampleVariable2         0.44690284E+000         0.10000000E+001         0.28871542E+000        -0.20614489E+000
-                 SampleVariable3        -0.30606792E+000         0.28871542E+000         0.10000000E+001         0.60556788E+000
-                 SampleVariable4        -0.13264252E-002        -0.20614489E+000         0.60556788E+000         0.10000000E+001
+                                         SampleVariable1
+                 SampleVariable1         0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the final output refined sample.
  
 
 stats.chain.refined.quantile
 
-                        Quantile         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                              Q0        -0.13664530E+002         0.11288669E+002         0.16253767E+002        -0.37792118E+001
-                              Q5        -0.11667195E+002         0.13323768E+002         0.18347162E+002        -0.16670744E+001
-                             Q10        -0.11292635E+002         0.13697388E+002         0.18726231E+002        -0.12797663E+001
-                             Q25        -0.10670486E+002         0.14318974E+002         0.19314047E+002        -0.68223510E+000
-                             Q50        -0.10003969E+002         0.15007609E+002         0.19998446E+002         0.32392607E-001
-                             Q75        -0.93346549E+001         0.15660711E+002         0.20694422E+002         0.70027832E+000
-                             Q90        -0.87323884E+001         0.16252810E+002         0.21315682E+002         0.13129112E+001
-                             Q95        -0.83589078E+001         0.16625065E+002         0.21675471E+002         0.16623922E+001
-                            Q100        -0.59641249E+001         0.18998929E+002         0.25100979E+002         0.32517381E+001
+                        Quantile         SampleVariable1
+                              Q0        -0.32992450E+001
+                              Q5        -0.17356865E+001
+                             Q10        -0.13479759E+001
+                             Q25        -0.65216848E+000
+                             Q50        -0.23057333E-002
+                             Q75         0.70691045E+000
+                             Q90         0.12355961E+001
+                             Q95         0.16430101E+001
+                            Q100         0.38765239E+001
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the final output refined sample.
  
