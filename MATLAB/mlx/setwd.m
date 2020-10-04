@@ -4,8 +4,6 @@
 % Live Scripts to the same location where they exist,
 % instead of a temporary folder created by MATLAB.
 
-function currentDir = setwd()
-    filePath = mfilename('fullpath');
-    [currentDir,fileName,fileExt] = fileparts(filePath); cd(currentDir);
-    cd(fileparts(mfilename('fullpath'))); % Change working directory to source code directory.
-end
+filePath = mfilename('fullpath');
+[currentDir,fileName,fileExt] = fileparts(filePath); cd(currentDir);
+cd(fileparts(mfilename('fullpath'))); % Change working directory to source code directory.
