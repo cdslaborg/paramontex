@@ -1128,14 +1128,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/04 - 01:17:43                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/04 - 01:23:32                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 01:17:44                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 01:23:33                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1205,28 +1205,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        1.431999921798706
+        1.439999818801880
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .4773333072662354E-04
+        .4799999396006267E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1412298359681154E-04
+        .1420188193502520E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1412298359681154E-04
+        .1420188193502520E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1234,7 +1234,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1412298359681154E-04
+        .1420188193502520E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1250,7 +1250,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .9103011577061998E-05
+        .7958964510508100E-05
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  

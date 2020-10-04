@@ -7,9 +7,9 @@
 ****                                                  Plain Powerful Parallel                                                   ****
 ****                                                    Monte Carlo Library                                                     ****
 ****                                                                                                                            ****
-****                                                       Version 1.2.0                                                        ****
+****                                                       Version 1.3.0                                                        ****
 ****                                                                                                                            ****
-****                                              Build: Tue Sep 22 07:16:38 2020                                               ****
+****                                              Build: Sat Oct 03 13:53:31 2020                                               ****
 ****                                                                                                                            ****
 ****                                                   Department of Physics                                                    ****
 ****                                              Computational & Data Science Lab                                              ****
@@ -70,7 +70,7 @@ Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R
 ************************************************************************************************************************************
  
 /I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\Python\mod /I:. /nologo /sta
-ndard-semantics /F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.2.0' /defi
+ndard-semantics /F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.3.0' /defi
 ne:CFI_ENABLED /define:PYTHON_ENABLED /define:OS_IS_WINDOWS /define:IFORT_ENABLED /define:DLL_ENABLED /threads /libs:static /module:
 D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\Python\mod /c
  
@@ -92,7 +92,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          9/19/2020, 1:38:47 PM
+System Boot Time:          10/3/2020, 5:17:04 PM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -106,10 +106,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 43,327 MB
+Available Physical Memory: 49,087 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 51,173 MB
-Virtual Memory: In Use:    23,940 MB
+Virtual Memory: Available: 56,403 MB
+Virtual Memory: In Use:    18,710 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -125,11 +125,7 @@ Hotfix(s):                 8 Hotfix(s) Installed.
 Network Card(s):           5 NIC(s) Installed.
 [01]: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
 Connection Name: Ethernet 2
-DHCP Enabled:    No
-IP address(es)
-[01]: 129.107.211.30
-[02]: fe80::a00e:774f:8d77:50bb
-[03]: fe80::6a29:427c:5bd8:2bf5
+Status:          Hardware not present
 [02]: ExpressVPN TAP Adapter
 Connection Name: Ethernet 3
 Status:          Media disconnected
@@ -164,26 +160,26 @@ Data Execution Prevention Available: Yes
  
  
         ParaDRAM - NOTE: Variable outputFileName detected among the input variables to ParaDRAM:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113
+        ParaDRAM - NOTE: ./out/gaussian
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter
+        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_distribution_via_paradram
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\
+        ParaDRAM - NOTE: .\out\
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: ParaDRAM output files will be prefixed with:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113
+        ParaDRAM - NOTE: .\out\gaussian
  
  
  
         ParaDRAM - NOTE: Generating the output progress file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113_process_1_progress.txt
+        ParaDRAM - NOTE: .\out\gaussian_process_1_progress.txt
  
  
  
         ParaDRAM - NOTE: Generating the output chainfile:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113_process_1_chain.txt
+        ParaDRAM - NOTE: .\out\gaussian_process_1_chain.txt
  
  
  
@@ -225,16 +221,17 @@ inputFileHasPriority
 
         F
  
-        ParaDRAM - NOTE: If inputFileHasPriority = true (or T, both case-insensitive), then all ParaDRAM variables will be 
-        ParaDRAM - NOTE: read from the input file provided by the user, and the parameter specifications from within the 
-        ParaDRAM - NOTE: programming language environment (if any are made) will be completely ignored. If inputFileHasPriority 
-        ParaDRAM - NOTE: = false (or F, both case-insensitive), then all of ParaDRAM variable values that are taken from the 
-        ParaDRAM - NOTE: user-specified input file will be overwritten by their corresponding input values that are set from 
-        ParaDRAM - NOTE: within the user's programming environment (if any is provided). Note that this feature is useful 
-        ParaDRAM - NOTE: when, for example, some ParaDRAM variables have to computed and specified at runtime and therefore, 
-        ParaDRAM - NOTE: cannot be specified prior to the program execution. Currently, this functionality (i.e., prioritizing 
-        ParaDRAM - NOTE: the input file values to input-procedure-argument values) is available only in the Fortran-interface 
-        ParaDRAM - NOTE: to the ParaDRAM. The default value is FALSE.
+        ParaDRAM - NOTE: A logical (boolean) variable. If TRUE (or .true. or true or .t. from within an input file), then the 
+        ParaDRAM - NOTE: input specifications of the sampler will be read from the input file provided by the user, and the 
+        ParaDRAM - NOTE: simulation specification assignments from within the programming language environment (if any are 
+        ParaDRAM - NOTE: made) will be completely ignored. If inputFileHasPriority is FALSE, then all simulation specifications 
+        ParaDRAM - NOTE: of the ParaDRAM sampler that are taken from the user-specified input file will be overwritten by 
+        ParaDRAM - NOTE: their corresponding input values that are set from within the user's programming environment (if any 
+        ParaDRAM - NOTE: is provided). Note that this feature is useful when, for example, some simulation specifications have 
+        ParaDRAM - NOTE: to computed and specified at runtime and therefore, cannot be specified before the program execution. 
+        ParaDRAM - NOTE: Currently, this functionality (i.e., prioritizing the input file values to input-procedure-argument 
+        ParaDRAM - NOTE: values) is available only in the Fortran-interface to the ParaMonte library routines. The default 
+        ParaDRAM - NOTE: value is FALSE.
  
  
 
@@ -242,13 +239,14 @@ silentModeRequested
 
         F
  
-        ParaDRAM - NOTE: If silentModeRequested = true (or T, both case-insensitive), then the following contents will not be 
-        ParaDRAM - NOTE: printed in the output report file of ParaDRAM:
+        ParaDRAM - NOTE: A logical (boolean) variable. If TRUE (or .true. or true or .t. from within an input file), then the 
+        ParaDRAM - NOTE: following contents will not be printed in the output report file of ParaDRAM:
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE:     + ParaDRAM interface, compiler, and platform specifications.
         ParaDRAM - NOTE:     + ParaDRAM simulation specification-descriptions.
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE: The default value is FALSE.
+        ParaDRAM - NOTE: Setting this variable to true may break the functionality of the report-file parser methods of the 
+        ParaDRAM - NOTE: ParaMonte library in high-level languages (e.g., MATLAB, Python, R, ...). The default value is FALSE.
  
  
 
@@ -369,7 +367,7 @@ mpiFinalizeRequested
 
 outputFileName
 
-        D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113
+        .\out\gaussian
  
         ParaDRAM - NOTE: outputFileName contains the path and the base of the filename for ParaDRAM output files. If not 
         ParaDRAM - NOTE: provided by the user, the default outputFileName is constructed from the current date and time:
@@ -383,6 +381,18 @@ outputFileName
         ParaDRAM - NOTE: which ParaDRAM output files will be written. In this case, the output file naming convention described 
         ParaDRAM - NOTE: above will be used. Also, the given directory will be automatically created if it does not exist 
         ParaDRAM - NOTE: already.
+ 
+ 
+
+overwriteRequested
+
+        T
+ 
+        ParaDRAM - NOTE: A logical (boolean) variable. If true (or .true. or TRUE or .t. from within an input file), then any 
+        ParaDRAM - NOTE: existing old simulation files with the same name as the current simulation will be overwritten with 
+        ParaDRAM - NOTE: the new simulation output files. Note that if overwriteRequested is set to TRUE, then the restart 
+        ParaDRAM - NOTE: functionality is automatically turned off and any existing old simulation output files with the same 
+        ParaDRAM - NOTE: name as the current simulation will be overwritten by ParaDRAM. The default value is FALSE.
  
  
 
@@ -733,15 +743,15 @@ randomStartPointRequested
 
         F
  
-        ParaDRAM - NOTE: If randomStartPointRequested=TRUE (or true or t, all case-insensitive), then the variable startPointVec 
-        ParaDRAM - NOTE: will be initialized randomly for each MCMC chain that is to be generated by ParaDRAM. The random 
-        ParaDRAM - NOTE: values will be drawn from the specified or the default domain of startPointVec, given by 
-        ParaDRAM - NOTE: RandomStartPointDomain variable. Note that the value of startPointVec, if provided, has precedence 
-        ParaDRAM - NOTE: over random initialization. In other words, for every element of startPointVec that is not provided 
-        ParaDRAM - NOTE: as input only that element will initialized randomly if randomStartPointRequested=TRUE. Also, note 
-        ParaDRAM - NOTE: that even if startPointVec is randomly initialized, its random value will be deterministic between 
-        ParaDRAM - NOTE: different independent runs of ParaDRAM if the input variable randomSeed is provided by the user. The 
-        ParaDRAM - NOTE: default value is FALSE.
+        ParaDRAM - NOTE: A logical (boolean) variable. If true (or .true. or TRUE or .t. from within an input file), then the 
+        ParaDRAM - NOTE: variable startPointVec will be initialized randomly for each MCMC chain that is to be generated by 
+        ParaDRAM - NOTE: ParaDRAM. The random values will be drawn from the specified or the default domain of startPointVec, 
+        ParaDRAM - NOTE: given by RandomStartPointDomain variable. Note that the value of startPointVec, if provided, has 
+        ParaDRAM - NOTE: precedence over random initialization. In other words, for every element of startPointVec that is 
+        ParaDRAM - NOTE: not provided as input only that element will initialized randomly if randomStartPointRequested=TRUE. 
+        ParaDRAM - NOTE: Also, note that even if startPointVec is randomly initialized, its random value will be deterministic 
+        ParaDRAM - NOTE: between different independent runs of ParaDRAM if the input variable randomSeed is provided by the 
+        ParaDRAM - NOTE: user. The default value is FALSE.
  
  
 
@@ -1089,14 +1099,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/09/25 - 05:24:10                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/04 - 01:35:04                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/09/25 - 05:24:10                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 01:35:05                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1166,28 +1176,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        .3400001525878906
+        .3280000686645508
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .3400001525878906E-04
+        .3280000686645508E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1762937636564817E-04
+        .1700715900988026E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1762937636564817E-04
+        .1700715900988026E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1195,7 +1205,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1762937636564817E-04
+        .1700715900988026E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1211,7 +1221,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .8296165478176365E-05
+        .1026653692112367E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1481,7 +1491,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
  
  
         ParaDRAM - NOTE: Generating the output sample file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\sampling_univariate_gaussian_density_function_via_paradram\ParaDRAM_run_20200925_052410_113_process_1_sample.txt
+        ParaDRAM - NOTE: .\out\gaussian_process_1_sample.txt
  
  
  
