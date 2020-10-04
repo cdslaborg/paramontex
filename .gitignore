@@ -164,12 +164,12 @@ _deps
 # photos
 #########################
 
-*.pdf
-*.png
-*.gif
-*.jpg
-*.jpeg
-*.tiff
+#*.pdf
+#*.png
+#*.gif
+#*.jpg
+#*.jpeg
+#*.tiff
 
 #########################
 # documentation
