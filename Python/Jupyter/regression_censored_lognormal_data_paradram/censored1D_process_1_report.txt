@@ -160,26 +160,26 @@ Data Execution Prevention Available: Yes
  
  
         ParaDRAM - NOTE: Variable outputFileName detected among the input variables to ParaDRAM:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884
+        ParaDRAM - NOTE: ./censored1D
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
         ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\
+        ParaDRAM - NOTE: .\
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: ParaDRAM output files will be prefixed with:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884
+        ParaDRAM - NOTE: .\censored1D
  
  
  
         ParaDRAM - NOTE: Generating the output progress file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884_process_1_progress.txt
+        ParaDRAM - NOTE: .\censored1D_process_1_progress.txt
  
  
  
         ParaDRAM - NOTE: Generating the output chainfile:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884_process_1_chain.txt
+        ParaDRAM - NOTE: .\censored1D_process_1_chain.txt
  
  
  
@@ -373,7 +373,7 @@ mpiFinalizeRequested
 
 outputFileName
 
-        D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884
+        .\censored1D
  
         ParaDRAM - NOTE: outputFileName contains the path and the base of the filename for ParaDRAM output files. If not 
         ParaDRAM - NOTE: provided by the user, the default outputFileName is constructed from the current date and time:
@@ -1117,14 +1117,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/03 - 18:31:01                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/03 - 19:15:36                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/03 - 18:31:14                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/03 - 19:15:47                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1138,14 +1138,14 @@ stats.numFuncCall.accepted
 
 stats.numFuncCall.acceptedRejected
 
-        80354
+        79998
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected function calls.
  
 
 stats.numFuncCall.acceptedRejectedDelayed
 
-        80354
+        79998
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or delayed-rejection (if any requested) function 
         ParaDRAM - NOTE: calls.
@@ -1153,7 +1153,7 @@ stats.numFuncCall.acceptedRejectedDelayed
 
 stats.numFuncCall.acceptedRejectedDelayedUnused
 
-        80354
+        79998
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or unused function calls (by all processes, including 
         ParaDRAM - NOTE: delayed rejections, if any requested).
@@ -1161,14 +1161,14 @@ stats.numFuncCall.acceptedRejectedDelayedUnused
 
 stats.chain.verbose.efficiency.meanAcceptanceRate
 
-        .2504353055303329
+        .2519488623013469
  
         ParaDRAM - NOTE: This is the average MCMC acceptance rate.
  
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
-        .2488986235906115
+        .2500062501562539
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted and rejected function calls, that is, the 
         ParaDRAM - NOTE: number of accepted function calls divided by the number of (accepted + rejected) function calls.
@@ -1176,7 +1176,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
-        .2488986235906115
+        .2500062501562539
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, and delayed-rejection (if any 
         ParaDRAM - NOTE: requested) function calls, that is, the number of accepted function calls divided by the number of 
@@ -1185,7 +1185,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
-        .2488986235906115
+        .2500062501562539
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if any requested), 
         ParaDRAM - NOTE: and unused function calls, that is, the number of accepted function calls divided by the number of 
@@ -1194,28 +1194,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        13.12199997901917
+        11.06100010871887
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .6560999989509582E-03
+        .5530500054359436E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1633023866766952E-03
+        .1382659580079361E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1633023866766952E-03
+        .1382659580079361E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1223,7 +1223,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1633023866766952E-03
+        .1382659580079361E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1239,7 +1239,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .1529979857726211E-03
+        .1318282838338506E-03
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1374,21 +1374,21 @@ stats.chain.verbose.burnin.location.adaptationBased
 
 stats.chain.verbose.logFunc.max
 
-        -14933.88635811025
+        -14933.88063458206
  
         ParaDRAM - NOTE: This is the maximum logFunc value (the maximum of the user-specified objective function).
  
 
 stats.chain.compact.logFunc.max.location
 
-        18000
+        13126
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the compact chain.
  
 
 stats.chain.verbose.logFunc.max.location
 
-        72678
+        54255
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the verbose (Markov) chain.
  
@@ -1396,7 +1396,7 @@ stats.chain.verbose.logFunc.max.location
 stats.chain.verbose.logFunc.max.state
 
                               Average         LogStandardDeviation                       Cutoff
-                     -0.18978345E-001             -0.10652258E-001              0.69299929E+000
+                     -0.19179853E-001             -0.11338756E-001              0.69299905E+000
  
         ParaDRAM - NOTE: This is the coordinates, within the domain of the user-specified objective function, where the maximum 
         ParaDRAM - NOTE: logFunc occurs.
@@ -1411,7 +1411,7 @@ stats.chain.verbose.logFunc.max.state
 
 stats.chain.verbose.length.burninExcluded
 
-        80354
+        79998
  
         ParaDRAM - NOTE: This is the length of the verbose (Markov) Chain excluding burnin.
  
@@ -1419,9 +1419,9 @@ stats.chain.verbose.length.burninExcluded
 stats.chain.verbose.avgStd
 
                          variableName                         Mean           Standard Deviation
-                              Average             -0.18663656E-001              0.18572214E-001
-                 LogStandardDeviation             -0.11103845E-001              0.11389731E-001
-                               Cutoff              0.69315884E+000              0.16284682E-003
+                              Average             -0.19185597E-001              0.18406969E-001
+                 LogStandardDeviation             -0.11278315E-001              0.11422857E-001
+                               Cutoff              0.69315720E+000              0.15764476E-003
  
         ParaDRAM - NOTE: This is the mean and standard deviation of the verbose (Markov) chain variables.
  
@@ -1429,9 +1429,9 @@ stats.chain.verbose.avgStd
 stats.chain.verbose.covmat
 
                                                            Average         LogStandardDeviation                       Cutoff
-                              Average              0.34492712E-003              0.17190273E-003             -0.38564590E-007
-                 LogStandardDeviation              0.17190273E-003              0.12972598E-003             -0.22611308E-007
-                               Cutoff             -0.38564590E-007             -0.22611308E-007              0.26519087E-007
+                              Average              0.33881651E-003              0.17044421E-003             -0.45494849E-007
+                 LogStandardDeviation              0.17044421E-003              0.13048166E-003             -0.21031225E-007
+                               Cutoff             -0.45494849E-007             -0.21031225E-007              0.24851871E-007
  
         ParaDRAM - NOTE: This is the covariance matrix of the verbose (Markov) chain.
  
@@ -1439,9 +1439,9 @@ stats.chain.verbose.covmat
 stats.chain.verbose.cormat
 
                                                            Average         LogStandardDeviation                       Cutoff
-                              Average              0.10000000E+001              0.81265387E+000             -0.12751044E-001
-                 LogStandardDeviation              0.81265387E+000              0.10000000E+001             -0.12190820E-001
-                               Cutoff             -0.12751044E-001             -0.12190820E-001              0.10000000E+001
+                              Average              0.10000000E+001              0.81063479E+000             -0.15678352E-001
+                 LogStandardDeviation              0.81063479E+000              0.10000000E+001             -0.11679125E-001
+                               Cutoff             -0.15678352E-001             -0.11679125E-001              0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the verbose (Markov) chain.
  
@@ -1449,15 +1449,15 @@ stats.chain.verbose.cormat
 stats.chain.verbose.quantile
 
                              Quantile                      Average         LogStandardDeviation                       Cutoff
-                                   Q0             -0.83856658E-001             -0.53797198E-001              0.69299717E+000
-                                   Q5             -0.48464206E-001             -0.29697110E-001              0.69300570E+000
-                                  Q10             -0.42025738E-001             -0.25665222E-001              0.69301479E+000
-                                  Q25             -0.31584377E-001             -0.18949147E-001              0.69304293E+000
-                                  Q50             -0.19106688E-001             -0.11116123E-001              0.69310732E+000
-                                  Q75             -0.60850452E-002             -0.33509203E-002              0.69322102E+000
-                                  Q90              0.52794566E-002              0.34086288E-002              0.69337399E+000
-                                  Q95              0.12449365E-001              0.77155903E-002              0.69348236E+000
-                                 Q100              0.57684268E-001              0.39329148E-001              0.69452492E+000
+                                   Q0             -0.88150833E-001             -0.57058213E-001              0.69299717E+000
+                                   Q5             -0.48887563E-001             -0.29911062E-001              0.69300485E+000
+                                  Q10             -0.42981137E-001             -0.25769099E-001              0.69301255E+000
+                                  Q25             -0.32034874E-001             -0.19272989E-001              0.69304341E+000
+                                  Q50             -0.19538862E-001             -0.11397691E-001              0.69311000E+000
+                                  Q75             -0.66141679E-002             -0.34733311E-002              0.69321728E+000
+                                  Q90              0.42488137E-002              0.34037204E-002              0.69336642E+000
+                                  Q95              0.11436008E-001              0.76777403E-002              0.69347238E+000
+                                 Q100              0.58166931E-001              0.31341364E-001              0.69433595E+000
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the verbose (Markov) chain.
  
@@ -1465,10 +1465,9 @@ stats.chain.verbose.quantile
 stats.chain.refined.iac
 
                       RefinementStage                   SampleSize            IAC_SampleLogFunc                  IAC_Average     IAC_LogStandardDeviation                   IAC_Cutoff
-                                    0                        80354              0.89160322E+001              0.89182056E+001              0.68012910E+001              0.84923810E+001
-                                    1                         9010              0.26444266E+001              0.29992018E+001              0.23821558E+001              0.22831956E+001
-                                    2                         3004              0.10122682E+001              0.22433649E+001              0.13441243E+001              0.10764425E+001
-                                    3                         1339              0.12334054E+001              0.11721754E+001              0.85044122E+000              0.12720987E+001
+                                    0                        79998              0.47477375E+001              0.41648635E+001              0.44103994E+001              0.66115321E+001
+                                    1                        12099              0.14405486E+001              0.25676035E+001              0.24323872E+001              0.17157071E+001
+                                    2                         4712              0.14501882E+001              0.14783636E+001              0.19986816E+001              0.10098311E+001
  
         ParaDRAM - NOTE: This is the table of the Integrated Autocorrelation (IAC) of individual variables in the verbose 
         ParaDRAM - NOTE: (Markov) chain, at increasing stages of chain refinements.
@@ -1476,14 +1475,14 @@ stats.chain.refined.iac
 
 stats.chain.refined.ess
 
-        1339
+        4712
  
         ParaDRAM - NOTE: This is the estimated Effective (decorrelated) Sample Size (ESS) of the final refined chain.
  
 
 stats.chain.refined.efficiency.essOverAccepted
 
-        .6695000000000000E-01
+        .2356000000000000
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted function calls, that is, the final 
         ParaDRAM - NOTE: refined effective sample size (ESS) divided by the number of accepted function calls.
@@ -1491,7 +1490,7 @@ stats.chain.refined.efficiency.essOverAccepted
 
 stats.chain.refined.efficiency.essOverAcceptedRejected
 
-        .1666376284939144E-01
+        .5890147253681342E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted and rejected function calls, that 
         ParaDRAM - NOTE: is, the final refined effective sample size (ESS) divided by the number of (accepted + rejected) 
@@ -1500,7 +1499,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejected
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
-        .1666376284939144E-01
+        .5890147253681342E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, and delayed-rejection 
         ParaDRAM - NOTE: (if any requested) function calls, that is, the final refined effective sample size (ESS) divided by 
@@ -1509,7 +1508,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
-        .1666376284939144E-01
+        .5890147253681342E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if 
         ParaDRAM - NOTE: any requested), and unused function calls, that is, the final refined effective sample size (ESS) 
@@ -1517,7 +1516,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
  
  
         ParaDRAM - NOTE: Generating the output sample file:
-        ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram\ParaDRAM_run_20201003_183100_884_process_1_sample.txt
+        ParaDRAM - NOTE: .\censored1D_process_1_sample.txt
  
  
  
@@ -1530,7 +1529,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
 stats.chain.refined.length
 
-        1339
+        4712
  
         ParaDRAM - NOTE: This is the final output refined sample size. 
  
@@ -1538,9 +1537,9 @@ stats.chain.refined.length
 stats.chain.refined.avgStd
 
                          variableName                         Mean           Standard Deviation
-                              Average             -0.18842850E-001              0.18240403E-001
-                 LogStandardDeviation             -0.11296883E-001              0.11072413E-001
-                               Cutoff              0.69315584E+000              0.15799897E-003
+                              Average             -0.19254637E-001              0.18195181E-001
+                 LogStandardDeviation             -0.11345634E-001              0.11308481E-001
+                               Cutoff              0.69315997E+000              0.16111204E-003
  
         ParaDRAM - NOTE: This is the Mean and standard deviation table of the final output refined sample.
  
@@ -1548,9 +1547,9 @@ stats.chain.refined.avgStd
 stats.chain.refined.covmat
 
                                                            Average         LogStandardDeviation                       Cutoff
-                              Average              0.33271230E-003              0.15959411E-003              0.29014964E-007
-                 LogStandardDeviation              0.15959411E-003              0.12259833E-003              0.66959539E-007
-                               Cutoff              0.29014964E-007              0.66959539E-007              0.24963674E-007
+                              Average              0.33106461E-003              0.16542943E-003             -0.66312903E-007
+                 LogStandardDeviation              0.16542943E-003              0.12788175E-003             -0.11034686E-007
+                               Cutoff             -0.66312903E-007             -0.11034686E-007              0.25957090E-007
  
         ParaDRAM - NOTE: This is the covariance matrix of the final output refined sample.
  
@@ -1558,9 +1557,9 @@ stats.chain.refined.covmat
 stats.chain.refined.cormat
 
                                                            Average         LogStandardDeviation                       Cutoff
-                              Average              0.10000000E+001              0.79020570E+000              0.10067771E-001
-                 LogStandardDeviation              0.79020570E+000              0.10000000E+001              0.38275064E-001
-                               Cutoff              0.10067771E-001              0.38275064E-001              0.10000000E+001
+                              Average              0.10000000E+001              0.80399274E+000             -0.22621097E-001
+                 LogStandardDeviation              0.80399274E+000              0.10000000E+001             -0.60565835E-002
+                               Cutoff             -0.22621097E-001             -0.60565835E-002              0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the final output refined sample.
  
@@ -1568,15 +1567,15 @@ stats.chain.refined.cormat
 stats.chain.refined.quantile
 
                              Quantile                      Average         LogStandardDeviation                       Cutoff
-                                   Q0             -0.82688781E-001             -0.43077017E-001              0.69299717E+000
-                                   Q5             -0.47154271E-001             -0.29533271E-001              0.69300438E+000
-                                  Q10             -0.41114311E-001             -0.25665222E-001              0.69301396E+000
-                                  Q25             -0.31450452E-001             -0.18712216E-001              0.69303963E+000
-                                  Q50             -0.19643795E-001             -0.11170666E-001              0.69310484E+000
-                                  Q75             -0.62269987E-002             -0.40865706E-002              0.69322158E+000
-                                  Q90              0.49379752E-002              0.32641584E-002              0.69336309E+000
-                                  Q95              0.11737190E-001              0.66480182E-002              0.69346039E+000
-                                 Q100              0.48826029E-001              0.25466304E-001              0.69414007E+000
+                                   Q0             -0.78824161E-001             -0.50508058E-001              0.69299717E+000
+                                   Q5             -0.48695199E-001             -0.29511911E-001              0.69300514E+000
+                                  Q10             -0.42892402E-001             -0.25656894E-001              0.69301305E+000
+                                  Q25             -0.32015273E-001             -0.19318526E-001              0.69304433E+000
+                                  Q50             -0.19581413E-001             -0.11560749E-001              0.69311076E+000
+                                  Q75             -0.68362522E-002             -0.35723280E-002              0.69322068E+000
+                                  Q90              0.39616978E-002              0.30944350E-002              0.69337143E+000
+                                  Q95              0.11428035E-001              0.71777889E-002              0.69348442E+000
+                                 Q100              0.48833781E-001              0.30664285E-001              0.69433595E+000
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the final output refined sample.
  
