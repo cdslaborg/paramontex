@@ -30,8 +30,9 @@ pmpd = pm.ParaDRAM() # define a ParaMonte sampler instance
 
 pmpd.mpiEnabled = True # This is essential as it enables the invocation of the MPI-parallelized ParaDRAM routines.
 
+pmpd.spec.overwriteRequested = True # overwrite existing output files if needed
 pmpd.spec.randomSeed = 3751 # initialize the random seed to generate reproducible results.
-pmpd.spec.outputFileName = "./sampling_multivariate_normal_density_function_via_paradram/mvn_parallel_multiChain"
+pmpd.spec.outputFileName = "./out/mvn_parallel_multiChain"
 pmpd.spec.progressReportPeriod = 20000
 pmpd.spec.chainSize = 30000 # the default 100,000 unique points is too large for this simple example, so set it to 30000.
 
