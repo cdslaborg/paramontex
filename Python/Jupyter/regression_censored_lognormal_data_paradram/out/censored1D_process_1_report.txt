@@ -92,7 +92,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          10/2/2020, 8:14:51 PM
+System Boot Time:          10/3/2020, 5:17:04 PM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -106,10 +106,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 50,759 MB
+Available Physical Memory: 49,087 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 58,628 MB
-Virtual Memory: In Use:    16,485 MB
+Virtual Memory: Available: 56,403 MB
+Virtual Memory: In Use:    18,710 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -160,26 +160,26 @@ Data Execution Prevention Available: Yes
  
  
         ParaDRAM - NOTE: Variable outputFileName detected among the input variables to ParaDRAM:
-        ParaDRAM - NOTE: ./censored1D
+        ParaDRAM - NOTE: ./out/censored1D
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Absolute path to the current working directory:
         ParaDRAM - NOTE: D:\Dropbox\Projects\20180101_ParaMonte\paramontex\Python\Jupyter\regression_censored_lognormal_data_paradram
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Generating the requested directory for the ParaDRAM output files:
-        ParaDRAM - NOTE: .\
+        ParaDRAM - NOTE: .\out\
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: ParaDRAM output files will be prefixed with:
-        ParaDRAM - NOTE: .\censored1D
+        ParaDRAM - NOTE: .\out\censored1D
  
  
  
         ParaDRAM - NOTE: Generating the output progress file:
-        ParaDRAM - NOTE: .\censored1D_process_1_progress.txt
+        ParaDRAM - NOTE: .\out\censored1D_process_1_progress.txt
  
  
  
         ParaDRAM - NOTE: Generating the output chainfile:
-        ParaDRAM - NOTE: .\censored1D_process_1_chain.txt
+        ParaDRAM - NOTE: .\out\censored1D_process_1_chain.txt
  
  
  
@@ -373,7 +373,7 @@ mpiFinalizeRequested
 
 outputFileName
 
-        .\censored1D
+        .\out\censored1D
  
         ParaDRAM - NOTE: outputFileName contains the path and the base of the filename for ParaDRAM output files. If not 
         ParaDRAM - NOTE: provided by the user, the default outputFileName is constructed from the current date and time:
@@ -1117,14 +1117,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/03 - 22:59:02                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/04 - 00:11:52                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/03 - 22:59:13                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/04 - 00:12:03                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1194,28 +1194,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        11.53399991989136
+        10.32999992370605
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .5766999959945679E-03
+        .5164999961853028E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1441786034637286E-03
+        .1291282272520070E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1441786034637286E-03
+        .1291282272520070E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1223,7 +1223,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1441786034637286E-03
+        .1291282272520070E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1239,7 +1239,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .1296407506031920E-03
+        .1212780217939134E-03
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1516,7 +1516,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
  
  
         ParaDRAM - NOTE: Generating the output sample file:
-        ParaDRAM - NOTE: .\censored1D_process_1_sample.txt
+        ParaDRAM - NOTE: .\out\censored1D_process_1_sample.txt
  
  
  
