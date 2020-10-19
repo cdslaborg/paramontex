@@ -92,7 +92,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          10/12/2020, 11:53:15 AM
+System Boot Time:          10/18/2020, 3:10:54 AM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -106,10 +106,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 40,607 MB
+Available Physical Memory: 42,268 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 48,207 MB
-Virtual Memory: In Use:    26,906 MB
+Virtual Memory: Available: 49,472 MB
+Virtual Memory: In Use:    25,641 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -1099,14 +1099,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/15 - 13:40:53                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/19 - 01:00:04                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/15 - 13:40:53                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/19 - 01:00:05                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1176,28 +1176,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        .3249998092651367
+        .4409999847412109
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .3249998092651367E-04
+        .4409999847412109E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1685159230867659E-04
+        .2286632711506849E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1685159230867659E-04
+        .2286632711506849E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1205,7 +1205,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1685159230867659E-04
+        .2286632711506849E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1221,7 +1221,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .8192347204439203E-05
+        .1078487419184592E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
