@@ -7,9 +7,9 @@
 ****                                                  Plain Powerful Parallel                                                   ****
 ****                                                    Monte Carlo Library                                                     ****
 ****                                                                                                                            ****
-****                                                       Version 1.3.0                                                        ****
+****                                                       Version 1.4.0                                                        ****
 ****                                                                                                                            ****
-****                                              Build: Sat Oct 03 13:57:08 2020                                               ****
+****                                              Build: Thu Oct 29 01:05:57 2020                                               ****
 ****                                                                                                                            ****
 ****                                                   Department of Physics                                                    ****
 ****                                              Computational & Data Science Lab                                              ****
@@ -71,7 +71,7 @@ Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R
  
 /I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\mpi\Python\mod /I:. /IC:\Program Fi
 les (x86)\IntelSWTools\compilers_and_libraries_2019.4.245\windows\mpi\intel64\bin\..\..\intel64\include /nologo /standard-semantics 
-/F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.3.0' /define:CFI_ENABLED /
+/F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.4.0' /define:CFI_ENABLED /
 define:PYTHON_ENABLED /define:OS_IS_WINDOWS /define:IFORT_ENABLED /define:DLL_ENABLED /define:MPI_ENABLED /threads /libs:static /mod
 ule:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\mpi\Python\mod /c
  
@@ -93,7 +93,7 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          10/12/2020, 11:53:15 AM
+System Boot Time:          10/24/2020, 3:40:44 PM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
@@ -107,10 +107,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 40,607 MB
+Available Physical Memory: 39,691 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 48,207 MB
-Virtual Memory: In Use:    26,906 MB
+Virtual Memory: Available: 46,315 MB
+Virtual Memory: In Use:    28,798 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-PS1-CPB-2
@@ -865,10 +865,23 @@ sampleRefinementMethod
         ParaDRAM - NOTE:             the refined sample may be smaller than the default choice in the first case in the above.
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Note that in order to obtain i.i.d. samples from a multidimensional chain, ParaDRAM will use the 
-        ParaDRAM - NOTE: maximum of IAC among all dimensions of the chain to refine the chain. Also, note that the value 
-        ParaDRAM - NOTE: specified for sampleRefinementCount is used only when the variable sampleSize < 0, otherwise, it will 
-        ParaDRAM - NOTE: be ignored. The default value is sampleRefinementMethod = 'BatchMeans'. Note that the input values 
-        ParaDRAM - NOTE: are case-insensitive and white-space characters are ignored.
+        ParaDRAM - NOTE: average of IAC among all dimensions of the chain to refine the chain. If the maximum, minimum, or 
+        ParaDRAM - NOTE: the median of IACs is preferred add '-max' (or '-maximum'), '-min' (or '-minimum'), '-med' (or 
+        ParaDRAM - NOTE: '-median'), respectively, to the value of sampleRefinementMethod. For example, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-max'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: or, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-compact-max'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: or, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-max-compact'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: Also, note that the value specified for sampleRefinementCount is used only when the variable sampleSize 
+        ParaDRAM - NOTE: < 0, otherwise, it will be ignored. The default value is sampleRefinementMethod = 'BatchMeans'. Note 
+        ParaDRAM - NOTE: that the input values are case-insensitive and white-space characters are ignored.
  
  
 
@@ -1128,14 +1141,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/15 - 13:45:20                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/10/29 - 02:57:30                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/15 - 13:45:23                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/10/29 - 02:57:34                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1205,28 +1218,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        3.466000080108643
+        3.740999937057495
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .1155333360036214E-03
+        .1246999979019165E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1104630806039023E-04
+        .1192274575981609E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1104630806039023E-04
+        .1192274575981609E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1234,7 +1247,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1104630806039023E-04
+        .1192274575981609E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1250,7 +1263,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .8391490549302168E-05
+        .9073516464440079E-05
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1480,11 +1493,11 @@ stats.chain.refined.iac
 
                  RefinementStage              SampleSize       IAC_SampleLogFunc     IAC_SampleVariable1     IAC_SampleVariable2     IAC_SampleVariable3     IAC_SampleVariable4
                                0                  313770         0.64252766E+001         0.29925135E+001         0.26926817E+001         0.43436726E+001         0.24271535E+001
-                               1                   48458         0.93025184E+001         0.21431633E+001         0.22165764E+001         0.25958645E+001         0.21582370E+001
-                               2                    5209         0.28315366E+001         0.79840051E+000         0.93772896E+000         0.81383523E+000         0.74537047E+000
-                               3                    1839         0.11340582E+001         0.26237557E+001         0.15633719E+001         0.47293711E+001         0.50635791E+001
-                               4                     363         0.65555783E+000         0.58536672E+000         0.56618676E+000         0.92872623E+000         0.23966765E+001
-                               5                     151         0.94047579E+000         0.37456201E+000         0.36592917E+000         0.49290159E+000         0.57418907E+000
+                               1                   82451         0.79921393E+001         0.23800899E+001         0.26741861E+001         0.35116257E+001         0.30814527E+001
+                               2                   20991         0.87412555E+001         0.15376550E+001         0.13167302E+001         0.18335595E+001         0.93043631E+000
+                               3                    7309         0.56412301E+001         0.10427114E+001         0.17864477E+001         0.13623369E+001         0.11501144E+001
+                               4                    3327         0.32517580E+001         0.37018032E+001         0.20009153E+001         0.81347508E+001         0.75376204E+001
+                               5                     675         0.16335123E+001         0.22188375E+001         0.14442614E+001         0.21270234E+001         0.24059853E+001
  
         ParaDRAM - NOTE: This is the table of the Integrated Autocorrelation (IAC) of individual variables in the verbose 
         ParaDRAM - NOTE: (Markov) chain, at increasing stages of chain refinements.
@@ -1492,14 +1505,14 @@ stats.chain.refined.iac
 
 stats.chain.refined.ess
 
-        151
+        675
  
         ParaDRAM - NOTE: This is the estimated Effective (decorrelated) Sample Size (ESS) of the final refined chain.
  
 
 stats.chain.refined.efficiency.essOverAccepted
 
-        .5033333333333333E-02
+        .2250000000000000E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted function calls, that is, the final 
         ParaDRAM - NOTE: refined effective sample size (ESS) divided by the number of accepted function calls.
@@ -1507,7 +1520,7 @@ stats.chain.refined.efficiency.essOverAccepted
 
 stats.chain.refined.efficiency.essOverAcceptedRejected
 
-        .4812442234757944E-03
+        .2151257290371928E-02
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted and rejected function calls, that 
         ParaDRAM - NOTE: is, the final refined effective sample size (ESS) divided by the number of (accepted + rejected) 
@@ -1516,7 +1529,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejected
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
-        .4812442234757944E-03
+        .2151257290371928E-02
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, and delayed-rejection 
         ParaDRAM - NOTE: (if any requested) function calls, that is, the final refined effective sample size (ESS) divided by 
@@ -1525,7 +1538,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
-        .4812442234757944E-03
+        .2151257290371928E-02
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if 
         ParaDRAM - NOTE: any requested), and unused function calls, that is, the final refined effective sample size (ESS) 
@@ -1546,7 +1559,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
 stats.chain.refined.length
 
-        151
+        675
  
         ParaDRAM - NOTE: This is the final output refined sample size. 
  
@@ -1554,10 +1567,10 @@ stats.chain.refined.length
 stats.chain.refined.avgStd
 
                     variableName                    Mean      Standard Deviation
-                 SampleVariable1        -0.10047850E+002         0.10480779E+001
-                 SampleVariable2         0.14854155E+002         0.10060024E+001
-                 SampleVariable3         0.19963111E+002         0.10381977E+001
-                 SampleVariable4         0.67106450E-001         0.10487609E+001
+                 SampleVariable1        -0.98819305E+001         0.10113728E+001
+                 SampleVariable2         0.15029301E+002         0.99816229E+000
+                 SampleVariable3         0.19920361E+002         0.10696148E+001
+                 SampleVariable4        -0.13684400E-001         0.10447339E+001
  
         ParaDRAM - NOTE: This is the Mean and standard deviation table of the final output refined sample.
  
@@ -1565,10 +1578,10 @@ stats.chain.refined.avgStd
 stats.chain.refined.covmat
 
                                          SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10984672E+001         0.50991477E+000        -0.28764971E+000        -0.19572819E-001
-                 SampleVariable2         0.50991477E+000         0.10120408E+001         0.31461200E+000        -0.16393838E+000
-                 SampleVariable3        -0.28764971E+000         0.31461200E+000         0.10778545E+001         0.71757578E+000
-                 SampleVariable4        -0.19572819E-001        -0.16393838E+000         0.71757578E+000         0.10998994E+001
+                 SampleVariable1         0.10228749E+001         0.41305023E+000        -0.36099822E+000        -0.56578580E-001
+                 SampleVariable2         0.41305023E+000         0.99632796E+000         0.30658566E+000        -0.24384016E+000
+                 SampleVariable3        -0.36099822E+000         0.30658566E+000         0.11440758E+001         0.70446787E+000
+                 SampleVariable4        -0.56578580E-001        -0.24384016E+000         0.70446787E+000         0.10914690E+001
  
         ParaDRAM - NOTE: This is the covariance matrix of the final output refined sample.
  
@@ -1576,10 +1589,10 @@ stats.chain.refined.covmat
 stats.chain.refined.cormat
 
                                          SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                 SampleVariable1         0.10000000E+001         0.48362086E+000        -0.26435671E+000        -0.17806696E-001
-                 SampleVariable2         0.48362086E+000         0.10000000E+001         0.30122860E+000        -0.15538358E+000
-                 SampleVariable3        -0.26435671E+000         0.30122860E+000         0.10000000E+001         0.65903916E+000
-                 SampleVariable4        -0.17806696E-001        -0.15538358E+000         0.65903916E+000         0.10000000E+001
+                 SampleVariable1         0.10000000E+001         0.40915744E+000        -0.33370783E+000        -0.53546994E-001
+                 SampleVariable2         0.40915744E+000         0.10000000E+001         0.28715956E+000        -0.23382900E+000
+                 SampleVariable3        -0.33370783E+000         0.28715956E+000         0.10000000E+001         0.63041725E+000
+                 SampleVariable4        -0.53546994E-001        -0.23382900E+000         0.63041725E+000         0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the final output refined sample.
  
@@ -1587,15 +1600,15 @@ stats.chain.refined.cormat
 stats.chain.refined.quantile
 
                         Quantile         SampleVariable1         SampleVariable2         SampleVariable3         SampleVariable4
-                              Q0        -0.12872757E+002         0.12330101E+002         0.17071219E+002        -0.23979944E+001
-                              Q5        -0.11671440E+002         0.13199098E+002         0.17908611E+002        -0.16170592E+001
-                             Q10        -0.11453289E+002         0.13575339E+002         0.18611890E+002        -0.11960984E+001
-                             Q25        -0.10781173E+002         0.14267038E+002         0.19357342E+002        -0.63906020E+000
-                             Q50        -0.10166577E+002         0.14895449E+002         0.19999890E+002         0.61049836E-001
-                             Q75        -0.92711874E+001         0.15515276E+002         0.20643482E+002         0.58220433E+000
-                             Q90        -0.87136269E+001         0.16100131E+002         0.21187461E+002         0.16350144E+001
-                             Q95        -0.83673892E+001         0.16469219E+002         0.21364979E+002         0.18985064E+001
-                            Q100        -0.72168601E+001         0.17664498E+002         0.22599737E+002         0.33633196E+001
+                              Q0        -0.13324177E+002         0.12091080E+002         0.16729994E+002        -0.28805776E+001
+                              Q5        -0.11563301E+002         0.13411954E+002         0.18104792E+002        -0.17652627E+001
+                             Q10        -0.11208824E+002         0.13677033E+002         0.18595054E+002        -0.13616679E+001
+                             Q25        -0.10570239E+002         0.14318062E+002         0.19169364E+002        -0.68562118E+000
+                             Q50        -0.98642429E+001         0.15040785E+002         0.19954468E+002         0.25336944E-002
+                             Q75        -0.91876747E+001         0.15727641E+002         0.20620816E+002         0.67379018E+000
+                             Q90        -0.86439996E+001         0.16353106E+002         0.21318837E+002         0.12770179E+001
+                             Q95        -0.81708293E+001         0.16591984E+002         0.21689700E+002         0.17256847E+001
+                            Q100        -0.70857284E+001         0.17795874E+002         0.23580225E+002         0.34534029E+001
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the final output refined sample.
  
@@ -1606,8 +1619,8 @@ stats.chain.refined.quantile
 stats.chain.refined.kstest.prob
 
                        ProcessID   probKS(SampleLogFunc) probKS(SampleVariable1) probKS(SampleVariable2) probKS(SampleVariable3) probKS(SampleVariable4)
-                       1         0.90685077E+000         0.27098219E+000         0.24814997E-001         0.91099522E+000         0.81935233E+000
-                       3         0.90215439E+000         0.56153239E+000         0.46538291E-001         0.91634456E+000         0.76489035E+000
+                       1         0.13943076E+000         0.30169409E-001         0.27181411E+000         0.17562202E-001         0.69328775E+000
+                       3         0.96472582E-001         0.35107379E-001         0.45992695E+000         0.76917797E-001         0.80390629E+000
  
         ParaDRAM - NOTE: This is the table pairwise inter-chain Kolmogorov-Smirnov (KS) convergence (similarity) probabilities. 
         ParaDRAM - NOTE: Higher KS probabilities are better, indicating less evidence for a lack of convergence.
@@ -1615,10 +1628,10 @@ stats.chain.refined.kstest.prob
 
 stats.chain.refined.kstest.prob.min
 
-        .2481499664127777E-01
+        .1756220230600487E-01
  
         ParaDRAM - NOTE: This is the smallest KS-test probability for the inter-chain sampling convergence, which has happened 
-        ParaDRAM - NOTE: between SampleVariable2 on the chains generated by processes 2 and 1.
+        ParaDRAM - NOTE: between SampleVariable3 on the chains generated by processes 2 and 1.
  
  
  
