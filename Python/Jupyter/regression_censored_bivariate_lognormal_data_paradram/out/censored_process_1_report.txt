@@ -7,9 +7,9 @@
 ****                                                  Plain Powerful Parallel                                                   ****
 ****                                                    Monte Carlo Library                                                     ****
 ****                                                                                                                            ****
-****                                                       Version 1.3.0                                                        ****
+****                                                       Version 1.5.0                                                        ****
 ****                                                                                                                            ****
-****                                              Build: Sat Oct 03 13:53:31 2020                                               ****
+****                                              Build: Thu Dec 17 06:27:29 2020                                               ****
 ****                                                                                                                            ****
 ****                                                   Department of Physics                                                    ****
 ****                                              Computational & Data Science Lab                                              ****
@@ -60,7 +60,7 @@ Python 3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)]
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
-Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.4.245 Build 20190417
+Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.1.1.216 Build 20200306
  
  
 ************************************************************************************************************************************
@@ -69,10 +69,10 @@ Intel(R) Visual Fortran Intel(R) 64 Compiler for applications running on Intel(R
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
-/I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\Python\mod /I:. /nologo /sta
-ndard-semantics /F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.3.0' /defi
-ne:CFI_ENABLED /define:PYTHON_ENABLED /define:OS_IS_WINDOWS /define:IFORT_ENABLED /define:DLL_ENABLED /threads /libs:static /module:
-D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.0.4.245\release\dynamic\heap\serial\Python\mod /c
+/I:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.1.1.216\release\dynamic\heap\serial\Python\mod /I:. /nologo /sta
+ndard-semantics /F0x1000000000 /O3 /Qip /Qipo /Qunroll /Qunroll-aggressive /heap-arrays /fpp /define:PARAMONTE_VERSION='1.5.0' /defi
+ne:CFI_ENABLED /define:PYTHON_ENABLED /define:OS_IS_WINDOWS /define:INTEL_COMPILER_ENABLED /define:DLL_ENABLED /threads /libs:static
+ /module:D:\Dropbox\Projects\20180101_ParaMonte\git\build\winx64\intel\19.1.1.216\release\dynamic\heap\serial\Python\mod /c
  
  
 ************************************************************************************************************************************
@@ -92,13 +92,13 @@ Registered Owner:          uta
 Registered Organization:   university of texas @ arlington
 Product ID:                00329-00000-00003-AA203
 Original Install Date:     6/14/2020, 1:08:39 PM
-System Boot Time:          10/3/2020, 5:17:04 PM
+System Boot Time:          12/21/2020, 1:05:45 AM
 System Manufacturer:       Dell Inc.
 System Model:              Precision 7520
 System Type:               x64-based PC
 Processor(s):              1 Processor(s) Installed.
 [01]: Intel64 Family 6 Model 94 Stepping 3 GenuineIntel ~2901 Mhz
-BIOS Version:              Dell Inc. 1.15.1, 5/30/2019
+BIOS Version:              Dell Inc. 1.17.0, 1/9/2020
 Windows Directory:         C:\WINDOWS
 System Directory:          C:\WINDOWS\system32
 Boot Device:               \Device\HarddiskVolume2
@@ -106,14 +106,14 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,385 MB
-Available Physical Memory: 38,492 MB
+Available Physical Memory: 42,107 MB
 Virtual Memory: Max Size:  75,113 MB
-Virtual Memory: Available: 44,203 MB
-Virtual Memory: In Use:    30,910 MB
+Virtual Memory: Available: 49,379 MB
+Virtual Memory: In Use:    25,734 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
-Logon Server:              \\DC-PS1-CPB-2
-Hotfix(s):                 8 Hotfix(s) Installed.
+Logon Server:              \\DC-OSS-ARDC-1
+Hotfix(s):                 10 Hotfix(s) Installed.
 [01]: KB4576484
 [02]: KB4517245
 [03]: KB4560959
@@ -121,8 +121,10 @@ Hotfix(s):                 8 Hotfix(s) Installed.
 [05]: KB4565554
 [06]: KB4569073
 [07]: KB4576751
-[08]: KB4574727
-Network Card(s):           5 NIC(s) Installed.
+[08]: KB4580325
+[09]: KB4586863
+[10]: KB4592449
+Network Card(s):           6 NIC(s) Installed.
 [01]: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
 Connection Name: Ethernet 2
 Status:          Hardware not present
@@ -142,10 +144,13 @@ IP address(es)
 [05]: Bluetooth Device (Personal Area Network)
 Connection Name: Bluetooth Network Connection
 Status:          Media disconnected
-Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
-Virtualization Enabled In Firmware: Yes
-Second Level Address Translation: Yes
-Data Execution Prevention Available: Yes
+[06]: Hyper-V Virtual Ethernet Adapter
+Connection Name: vEthernet (WSL)
+DHCP Enabled:    No
+IP address(es)
+[01]: 172.18.98.129
+[02]: fe80::31d7:c74:2fb7:5ccd
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
  
  
 ************************************************************************************************************************************
@@ -445,15 +450,14 @@ sampleSize
  
         ParaDRAM - NOTE: The variable sampleSize is an integer that dictates the number of (hopefully, independent and 
         ParaDRAM - NOTE: identically distributed [i.i.d.]) samples to be drawn from the user-provided objective function. 
-        ParaDRAM - NOTE: Three ranges of values are possible:
+        ParaDRAM - NOTE: Three ranges of values are possible. If
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:     sampleSize < 0:
+        ParaDRAM - NOTE:     sampleSize < 0,
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:             Then, the absolute value of sampleSize dictates the sample size in units of the effective 
-        ParaDRAM - NOTE:             sample size. The effective sample is by definition i.i.d., and free from duplicates. The 
-        ParaDRAM - NOTE:             effective sample size is determined by ParaDRAM automatically toward the end of the 
-        ParaDRAM - NOTE:             simulation.
-        ParaDRAM - NOTE:             For example:
+        ParaDRAM - NOTE:             then, the absolute value of sampleSize dictates the sample size in units of the effective 
+        ParaDRAM - NOTE:             sample size. The effective sample is by definition i.i.d., and free from duplicates and 
+        ParaDRAM - NOTE:             residual autocorrelation. The effective sample size is automatically determined by ParaDRAM 
+        ParaDRAM - NOTE:             toward the end of the simulation. For example:
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE:                     sampleSize = -1 yields the effective i.i.d. sample drawn from the objective 
         ParaDRAM - NOTE:                     function.
@@ -461,22 +465,21 @@ sampleSize
         ParaDRAM - NOTE:                     sampleSize = -2 yields a (potentially non-i.i.d.) sample twice as big as the 
         ParaDRAM - NOTE:                     effective sample.
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:     sampleSize > 0:
+        ParaDRAM - NOTE:     sampleSize > 0,
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:             Then, the sample size is assumed to be in units of the number of points to be sampled. 
+        ParaDRAM - NOTE:             then, the sample size is assumed to be in units of the number of points to be sampled. 
         ParaDRAM - NOTE:             If sampleSize turns out to be less than effectiveSampleSize, the resulting sample will 
         ParaDRAM - NOTE:             be i.i.d.. If sampleSize turns out to be larger than effectiveSampleSize, the resulting 
-        ParaDRAM - NOTE:             sample will be potentially non-i.i.d.. The larger the difference, the more non-i.i.d. 
-        ParaDRAM - NOTE:             the resulting sample will be.
-        ParaDRAM - NOTE:             For example:
+        ParaDRAM - NOTE:             sample will be potentially non-i.i.d.. The larger this difference, the more non-i.i.d. 
+        ParaDRAM - NOTE:             the resulting final refined sample will be. For example:
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE:                     sampleSize = 1000 yields a 1000-points sample from the objective function.
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:     sampleSize = 0:
+        ParaDRAM - NOTE:     sampleSize = 0,
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE:             in which case, no sample file will be generated.
+        ParaDRAM - NOTE:             then, no sample file will be generated.
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE: Default value is sampleSize = -1.
+        ParaDRAM - NOTE: The default value is sampleSize = -1.
  
  
 
@@ -637,7 +640,10 @@ maxNumDomainCheckToWarn
         ParaDRAM - NOTE: function, the user will be warned until maxNumDomainCheckToWarn = maxNumDomainCheckToStop, in which 
         ParaDRAM - NOTE: case the sampler returns a fatal error and the program stops globally. The counter for this warning 
         ParaDRAM - NOTE: message is reset after a proposal sample from within the domain of the objective function is obtained. 
-        ParaDRAM - NOTE: The default value is 1000.
+        ParaDRAM - NOTE: When out-of-domain sampling happens frequently, it is a strong indication of something fundamentally 
+        ParaDRAM - NOTE: wrong in the simulation. It is, therefore, important to closely inspect and monitor for such frequent 
+        ParaDRAM - NOTE: out-of-domain samplings. This can be done by setting maxNumDomainCheckToWarn to an appropriate value 
+        ParaDRAM - NOTE: determined by the user. The default value is 1000.
  
  
 
@@ -648,7 +654,10 @@ maxNumDomainCheckToStop
         ParaDRAM - NOTE: maxNumDomainCheckToStop is an integer number beyond which the program will stop globally with a fatal 
         ParaDRAM - NOTE: error message declaring that the maximum number of proposal-out-of-domain-bounds has reached. The 
         ParaDRAM - NOTE: counter for this global-stop request is reset after a proposal point is accepted as a sample from 
-        ParaDRAM - NOTE: within the domain of the objective function. The default value is 10000.
+        ParaDRAM - NOTE: within the domain of the objective function. When out-of-domain sampling happens frequently, it is 
+        ParaDRAM - NOTE: a strong indication of something fundamentally wrong in the simulation. It is, therefore, important 
+        ParaDRAM - NOTE: to closely inspect and monitor for such frequent out-of-domain samplings. This can be done by setting 
+        ParaDRAM - NOTE: maxNumDomainCheckToStop to an appropriate value determined by the user. The default value is 10000.
  
  
 
@@ -667,13 +676,13 @@ chainSize
 
 randomStartPointDomainLowerLimitVec
 
-        -.1797693134862316E+308
-        -.1797693134862316E+308
-        -.1797693134862316E+308
-        -.1797693134862316E+308
-        -.1797693134862316E+308
-        -.1797693134862316E+308
-        -.1797693134862316E+308
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
  
         ParaDRAM - NOTE: RandomStartPointDomainLowerLimitVec represents the lower boundaries of the cubical domain from which 
         ParaDRAM - NOTE: the starting point(s) of the MCMC chain(s) will be initialized randomly (only if requested via the 
@@ -712,13 +721,13 @@ randomStartPointDomainLowerLimitVec
 
 randomStartPointDomainUpperLimitVec
 
-        .1797693134862316E+308
-        .1797693134862316E+308
-        .1797693134862316E+308
-        .1797693134862316E+308
-        .1797693134862316E+308
-        .1797693134862316E+308
-        .1797693134862316E+308
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
+        -.1797693134862316E+309
  
         ParaDRAM - NOTE: randomStartPointDomainUpperLimitVec represents the upper boundaries of the cubical domain from which 
         ParaDRAM - NOTE: the starting point(s) of the MCMC chain(s) will be initialized randomly (only if requested via the 
@@ -795,9 +804,9 @@ sampleRefinementCount
 
         1073741823
  
-        ParaDRAM - NOTE: When sampleSize < 0, the variable sampleRefinementCount is an integer that dictates the maximum number 
-        ParaDRAM - NOTE: of times the MCMC chain will be refined to remove the autocorrelation within the output MCMC sample. 
-        ParaDRAM - NOTE: For example,
+        ParaDRAM - NOTE: When sampleSize < 0, the integer variable sampleRefinementCount dictates the maximum number of times 
+        ParaDRAM - NOTE: the MCMC chain will be refined to remove the autocorrelation within the output MCMC sample. For 
+        ParaDRAM - NOTE: example,
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE:     if sampleRefinementCount = 0,
         ParaDRAM - NOTE: 
@@ -832,10 +841,10 @@ sampleRefinementCount
         ParaDRAM - NOTE:             of the resulting final sample is less than 2, virtually implying that an independent 
         ParaDRAM - NOTE:             identically-distributed (i.i.d.) sample has finally been obtained.
         ParaDRAM - NOTE: 
-        ParaDRAM - NOTE: Note that to obtain i.i.d. samples from a multidimensional chain, ParaDRAM will use the maximum of 
-        ParaDRAM - NOTE: Integrated Autocorrelation (IAC) among all dimensions of the chain to refine the chain. Note that 
-        ParaDRAM - NOTE: the value specified for sampleRefinementCount is used only when the variable sampleSize < 0, otherwise, 
-        ParaDRAM - NOTE: it will be ignored. The default value is sampleRefinementCount = 1073741823.
+        ParaDRAM - NOTE: Note that to obtain i.i.d. samples from a multidimensional chain, ParaDRAM will, by default, use the 
+        ParaDRAM - NOTE: maximum of Integrated Autocorrelation (IAC) among all dimensions of the chain to refine the chain. 
+        ParaDRAM - NOTE: Note that the value specified for sampleRefinementCount is used only when the variable sampleSize < 
+        ParaDRAM - NOTE: 0, otherwise, it will be ignored. The default value is sampleRefinementCount = 1073741823.
  
  
 
@@ -881,10 +890,23 @@ sampleRefinementMethod
         ParaDRAM - NOTE:             the refined sample may be smaller than the default choice in the first case in the above.
         ParaDRAM - NOTE: 
         ParaDRAM - NOTE: Note that in order to obtain i.i.d. samples from a multidimensional chain, ParaDRAM will use the 
-        ParaDRAM - NOTE: maximum of IAC among all dimensions of the chain to refine the chain. Also, note that the value 
-        ParaDRAM - NOTE: specified for sampleRefinementCount is used only when the variable sampleSize < 0, otherwise, it will 
-        ParaDRAM - NOTE: be ignored. The default value is sampleRefinementMethod = 'BatchMeans'. Note that the input values 
-        ParaDRAM - NOTE: are case-insensitive and white-space characters are ignored.
+        ParaDRAM - NOTE: average of IAC among all dimensions of the chain to refine the chain. If the maximum, minimum, or 
+        ParaDRAM - NOTE: the median of IACs is preferred add '-max' (or '-maximum'), '-min' (or '-minimum'), '-med' (or 
+        ParaDRAM - NOTE: '-median'), respectively, to the value of sampleRefinementMethod. For example, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-max'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: or, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-compact-max'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: or, 
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE:     sampleRefinementMethod = 'BatchMeans-max-compact'
+        ParaDRAM - NOTE: 
+        ParaDRAM - NOTE: Also, note that the value specified for sampleRefinementCount is used only when the variable sampleSize 
+        ParaDRAM - NOTE: < 0, otherwise, it will be ignored. The default value is sampleRefinementMethod = 'BatchMeans'. Note 
+        ParaDRAM - NOTE: that the input values are case-insensitive and white-space characters are ignored.
  
  
 
@@ -1061,9 +1083,9 @@ adaptiveUpdateCount
         1073741823
  
         ParaDRAM - NOTE: adaptiveUpdateCount represents the total number of adaptive updates that will be made to the parameters 
-        ParaDRAM - NOTE: of the proposal distribution, to increase the efficiency of the sampler thus increasing the sampling 
-        ParaDRAM - NOTE: efficiency of ParaDRAM. Every adaptiveUpdatePeriod number of calls to the objective function, the 
-        ParaDRAM - NOTE: parameters of the proposal distribution will be updated until either the total number of adaptive 
+        ParaDRAM - NOTE: of the proposal distribution to increase the efficiency of the sampler thus increasing the overall 
+        ParaDRAM - NOTE: sampling efficiency of ParaDRAM. Every adaptiveUpdatePeriod number of calls to the objective function, 
+        ParaDRAM - NOTE: the parameters of the proposal distribution will be updated until either the total number of adaptive 
         ParaDRAM - NOTE: updates reaches the value of adaptiveUpdateCount. This variable must be a non-negative integer. As 
         ParaDRAM - NOTE: a rule of thumb, it may be appropriate to set the input variable chainSize > 2 * adaptiveUpdatePeriod 
         ParaDRAM - NOTE: * adaptiveUpdateCount, to ensure ergodicity and stationarity of the MCMC sampler. If adaptiveUpdateCount=0, 
@@ -1153,14 +1175,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2020/10/05 - 02:19:55                                   ****
+****                                   Starting the ParaDRAM sampling - 2020/12/23 - 03:00:27                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2020/10/05 - 02:39:04                                    ****
+****                                   Exiting the ParaDRAM sampling - 2020/12/23 - 03:02:52                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1174,14 +1196,14 @@ stats.numFuncCall.accepted
 
 stats.numFuncCall.acceptedRejected
 
-        60303
+        58738
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected function calls.
  
 
 stats.numFuncCall.acceptedRejectedDelayed
 
-        60303
+        58738
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or delayed-rejection (if any requested) function 
         ParaDRAM - NOTE: calls.
@@ -1189,7 +1211,7 @@ stats.numFuncCall.acceptedRejectedDelayed
 
 stats.numFuncCall.acceptedRejectedDelayedUnused
 
-        60303
+        58738
  
         ParaDRAM - NOTE: This is the total number of accepted or rejected or unused function calls (by all processes, including 
         ParaDRAM - NOTE: delayed rejections, if any requested).
@@ -1197,14 +1219,14 @@ stats.numFuncCall.acceptedRejectedDelayedUnused
 
 stats.chain.verbose.efficiency.meanAcceptanceRate
 
-        .1676965647444280
+        .1716275324145623
  
         ParaDRAM - NOTE: This is the average MCMC acceptance rate.
  
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
-        .1658292290599141
+        .1702475399230481
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted and rejected function calls, that is, the 
         ParaDRAM - NOTE: number of accepted function calls divided by the number of (accepted + rejected) function calls.
@@ -1212,7 +1234,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejected
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
-        .1658292290599141
+        .1702475399230481
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, and delayed-rejection (if any 
         ParaDRAM - NOTE: requested) function calls, that is, the number of accepted function calls divided by the number of 
@@ -1221,7 +1243,7 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayed
 
 stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
-        .1658292290599141
+        .1702475399230481
  
         ParaDRAM - NOTE: This is the MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if any requested), 
         ParaDRAM - NOTE: and unused function calls, that is, the number of accepted function calls divided by the number of 
@@ -1230,28 +1252,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        1148.673000097275
+        144.9500000476837
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .1148673000097275
+        .1449500000476837E-01
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .1904835580480697E-01
+        .2467738091996386E-02
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .1904835580480697E-01
+        .2467738091996386E-02
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1259,7 +1281,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .1904835580480697E-01
+        .2467738091996386E-02
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1275,7 +1297,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .1902787587698930E-01
+        .2446848743234406E-02
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
@@ -1410,21 +1432,21 @@ stats.chain.verbose.burnin.location.adaptationBased
 
 stats.chain.verbose.logFunc.max
 
-        -1923.039027329757
+        -1923.004479452632
  
         ParaDRAM - NOTE: This is the maximum logFunc value (the maximum of the user-specified objective function).
  
 
 stats.chain.compact.logFunc.max.location
 
-        357
+        8242
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the compact chain.
  
 
 stats.chain.verbose.logFunc.max.location
 
-        1232
+        48600
  
         ParaDRAM - NOTE: This is the location of the first occurrence of the maximum logFunc in the verbose (Markov) chain.
  
@@ -1432,7 +1454,7 @@ stats.chain.verbose.logFunc.max.location
 stats.chain.verbose.logFunc.max.state
 
                            AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                      -0.36350862E-001              -0.16493107E-001              -0.20374682E-001               0.96538598E-002               0.71961645E+000               0.15019030E+001              -0.30014816E-004
+                       0.28071027E-001              -0.26655991E-001              -0.50555916E-002               0.28365406E-001               0.68758357E+000               0.15010678E+001              -0.21857876E-004
  
         ParaDRAM - NOTE: This is the coordinates, within the domain of the user-specified objective function, where the maximum 
         ParaDRAM - NOTE: logFunc occurs.
@@ -1447,7 +1469,7 @@ stats.chain.verbose.logFunc.max.state
 
 stats.chain.verbose.length.burninExcluded
 
-        60303
+        58738
  
         ParaDRAM - NOTE: This is the length of the verbose (Markov) Chain excluding burnin.
  
@@ -1455,13 +1477,13 @@ stats.chain.verbose.length.burninExcluded
 stats.chain.verbose.avgStd
 
                           variableName                          Mean            Standard Deviation
-                           AverageLogX               0.33748729E-001               0.12449756E+000
-                           AverageLogY              -0.22172517E-001               0.55916049E-001
-                 LogStandardDeviationX               0.79319591E-002               0.44845032E-001
-                 LogStandardDeviationY               0.25055411E-001               0.22695196E-001
-                     FirsherTrans(rho)               0.70020858E+000               0.60304072E-001
-                           cutoffSlope               0.14984939E+001               0.33870035E-002
-                       cutoffIntercept              -0.21280197E-002               0.19574128E-002
+                           AverageLogX               0.33081439E-001               0.12541508E+000
+                           AverageLogY              -0.22307211E-001               0.57395552E-001
+                 LogStandardDeviationX               0.67396308E-002               0.45172115E-001
+                 LogStandardDeviationY               0.25056713E-001               0.22615499E-001
+                     FirsherTrans(rho)               0.70015654E+000               0.62149763E-001
+                           cutoffSlope               0.14983292E+001               0.35625938E-002
+                       cutoffIntercept              -0.20960812E-002               0.19306886E-002
  
         ParaDRAM - NOTE: This is the mean and standard deviation of the verbose (Markov) chain variables.
  
@@ -1469,13 +1491,13 @@ stats.chain.verbose.avgStd
 stats.chain.verbose.covmat
 
                                                          AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                           AverageLogX               0.15499643E-001               0.30865009E-003               0.47441391E-002              -0.52509726E-004              -0.42676021E-002               0.41583268E-005               0.18018269E-004
-                           AverageLogY               0.30865009E-003               0.31266045E-002               0.58942447E-003              -0.29180032E-003               0.20632314E-002               0.11500366E-004               0.21498851E-005
-                 LogStandardDeviationX               0.47441391E-002               0.58942447E-003               0.20110769E-002               0.11555665E-003              -0.66723802E-003               0.15155701E-005               0.48422431E-005
-                 LogStandardDeviationY              -0.52509726E-004              -0.29180032E-003               0.11555665E-003               0.51507194E-003               0.12060402E-003              -0.17399402E-005               0.18907720E-006
-                     FirsherTrans(rho)              -0.42676021E-002               0.20632314E-002              -0.66723802E-003               0.12060402E-003               0.36365811E-002               0.42220847E-005              -0.42481841E-005
-                           cutoffSlope               0.41583268E-005               0.11500366E-004               0.15155701E-005              -0.17399402E-005               0.42220847E-005               0.11471793E-004               0.15165048E-005
-                       cutoffIntercept               0.18018269E-004               0.21498851E-005               0.48422431E-005               0.18907720E-006              -0.42481841E-005               0.15165048E-005               0.38314648E-005
+                           AverageLogX               0.15728942E-001               0.56348309E-004               0.47621735E-002               0.74235181E-004              -0.43345166E-002               0.18413112E-004               0.21480055E-004
+                           AverageLogY               0.56348309E-004               0.32942494E-002               0.64593453E-003              -0.24370122E-003               0.23238602E-002               0.11019729E-004               0.21431549E-005
+                 LogStandardDeviationX               0.47621735E-002               0.64593453E-003               0.20405200E-002               0.16413508E-003              -0.58113171E-003               0.43566339E-005               0.55344043E-005
+                 LogStandardDeviationY               0.74235181E-004              -0.24370122E-003               0.16413508E-003               0.51146080E-003               0.12004434E-003              -0.36764450E-005              -0.12994345E-005
+                     FirsherTrans(rho)              -0.43345166E-002               0.23238602E-002              -0.58113171E-003               0.12004434E-003               0.38625930E-002               0.43301140E-006              -0.47734390E-005
+                           cutoffSlope               0.18413112E-004               0.11019729E-004               0.43566339E-005              -0.36764450E-005               0.43301140E-006               0.12692074E-004               0.29132105E-005
+                       cutoffIntercept               0.21480055E-004               0.21431549E-005               0.55344043E-005              -0.12994345E-005              -0.47734390E-005               0.29132105E-005               0.37275586E-005
  
         ParaDRAM - NOTE: This is the covariance matrix of the verbose (Markov) chain.
  
@@ -1483,13 +1505,13 @@ stats.chain.verbose.covmat
 stats.chain.verbose.cormat
 
                                                          AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                           AverageLogX               0.10000000E+001               0.44337283E-001               0.84973249E+000              -0.18584246E-001              -0.56842927E+000               0.98614806E-002               0.73938356E-001
-                           AverageLogY               0.44337283E-001               0.10000000E+001               0.23505925E+000              -0.22994044E+000               0.61187798E+000               0.60723885E-001               0.19642481E-001
-                 LogStandardDeviationX               0.84973249E+000               0.23505925E+000               0.10000000E+001               0.11353941E+000              -0.24672878E+000               0.99780582E-002               0.55163248E-001
-                 LogStandardDeviationY              -0.18584246E-001              -0.22994044E+000               0.11353941E+000               0.10000000E+001               0.88121365E-001              -0.22635221E-001               0.42562076E-002
-                     FirsherTrans(rho)              -0.56842927E+000               0.61187798E+000              -0.24672878E+000               0.88121365E-001               0.10000000E+001               0.20671151E-001              -0.35989372E-001
-                           cutoffSlope               0.98614806E-002               0.60723885E-001               0.99780582E-002              -0.22635221E-001               0.20671151E-001               0.10000000E+001               0.22874190E+000
-                       cutoffIntercept               0.73938356E-001               0.19642481E-001               0.55163248E-001               0.42562076E-002              -0.35989372E-001               0.22874190E+000               0.10000000E+001
+                           AverageLogX               0.10000000E+001               0.78280374E-002               0.84059156E+000               0.26173020E-001              -0.55609813E+000               0.41210808E-001               0.88710167E-001
+                           AverageLogY               0.78280374E-002               0.10000000E+001               0.24913792E+000              -0.18774712E+000               0.65146680E+000               0.53892255E-001               0.19340294E-001
+                 LogStandardDeviationX               0.84059156E+000               0.24913792E+000               0.10000000E+001               0.16066631E+000              -0.20699730E+000               0.27071626E-001               0.63458268E-001
+                 LogStandardDeviationY               0.26173020E-001              -0.18774712E+000               0.16066631E+000               0.10000000E+001               0.85407502E-001              -0.45630539E-001              -0.29760209E-001
+                     FirsherTrans(rho)              -0.55609813E+000               0.65146680E+000              -0.20699730E+000               0.85407502E-001               0.10000000E+001               0.19556609E-002              -0.39781363E-001
+                           cutoffSlope               0.41210808E-001               0.53892255E-001               0.27071626E-001              -0.45630539E-001               0.19556609E-002               0.10000000E+001               0.42353891E+000
+                       cutoffIntercept               0.88710167E-001               0.19340294E-001               0.63458268E-001              -0.29760209E-001              -0.39781363E-001               0.42353891E+000               0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the verbose (Markov) chain.
  
@@ -1497,15 +1519,15 @@ stats.chain.verbose.cormat
 stats.chain.verbose.quantile
 
                               Quantile                   AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                                    Q0              -0.30634761E+000              -0.24632998E+000              -0.14562666E+000              -0.55226910E-001               0.44276112E+000               0.14813851E+001              -0.15783835E-001
-                                    Q5              -0.14358384E+000              -0.11853655E+000              -0.60292518E-001              -0.12388041E-001               0.59686489E+000               0.14924239E+001              -0.61240299E-002
-                                   Q10              -0.11101307E+000              -0.95384366E-001              -0.47177662E-001              -0.35016734E-002               0.62156608E+000               0.14942047E+001              -0.48535256E-002
-                                   Q25              -0.51878893E-001              -0.57854863E-001              -0.22568332E-001               0.92096228E-002               0.66256994E+000               0.14965391E+001              -0.29581587E-002
-                                   Q50               0.18187963E-001              -0.19309122E-001               0.47860922E-002               0.24660898E-001               0.70085259E+000               0.14988949E+001              -0.15715201E-002
-                                   Q75               0.10350601E+000               0.15128307E-001               0.35674966E-001               0.40898174E-001               0.74102259E+000               0.15009685E+001              -0.70085904E-003
-                                   Q90               0.20039933E+000               0.46551840E-001               0.65954467E-001               0.54451775E-001               0.77677210E+000               0.15021950E+001              -0.27631657E-003
-                                   Q95               0.26362606E+000               0.65692775E-001               0.86494326E-001               0.62388717E-001               0.79830819E+000               0.15030578E+001              -0.13105646E-003
-                                  Q100               0.62923338E+000               0.19328480E+000               0.22920988E+000               0.10967290E+000               0.89334790E+000               0.15112313E+001               0.12820467E-003
+                                    Q0              -0.33036422E+000              -0.26619637E+000              -0.14165025E+000              -0.65310206E-001               0.42646184E+000               0.14761141E+001              -0.22703580E-001
+                                    Q5              -0.14756163E+000              -0.11863052E+000              -0.62176152E-001              -0.11226258E-001               0.59611758E+000               0.14918223E+001              -0.59054530E-002
+                                   Q10              -0.11485179E+000              -0.96179767E-001              -0.49568032E-001              -0.35176792E-002               0.62195185E+000               0.14937768E+001              -0.46501043E-002
+                                   Q25              -0.55729936E-001              -0.59375262E-001              -0.24833265E-001               0.94439466E-002               0.65986870E+000               0.14964239E+001              -0.29618438E-002
+                                   Q50               0.17927532E-001              -0.19797246E-001               0.47386662E-002               0.25117159E-001               0.70122106E+000               0.14988699E+001              -0.15528992E-002
+                                   Q75               0.10827320E+000               0.14791994E-001               0.37053626E-001               0.39986426E-001               0.74151416E+000               0.15009785E+001              -0.71920395E-003
+                                   Q90               0.19835634E+000               0.48896876E-001               0.66259368E-001               0.54177367E-001               0.77758496E+000               0.15021378E+001              -0.26532399E-003
+                                   Q95               0.26068193E+000               0.69322806E-001               0.84621277E-001               0.62945146E-001               0.79959075E+000               0.15028728E+001              -0.12138997E-003
+                                  Q100               0.56198201E+000               0.20420540E+000               0.17027271E+000               0.11512375E+000               0.93807840E+000               0.15085227E+001               0.13738329E-003
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the verbose (Markov) chain.
  
@@ -1513,10 +1535,9 @@ stats.chain.verbose.quantile
 stats.chain.refined.iac
 
                        RefinementStage                    SampleSize             IAC_SampleLogFunc               IAC_AverageLogX               IAC_AverageLogY     IAC_LogStandardDeviationX     IAC_LogStandardDeviationY         IAC_FirsherTrans(rho)               IAC_cutoffSlope           IAC_cutoffIntercept
-                                     0                         60303               0.17972488E+002               0.10144073E+002               0.75100519E+001               0.63968109E+001               0.10057953E+002               0.70081427E+001               0.74171156E+001               0.82148599E+001
-                                     1                          3355               0.24262161E+001               0.25278102E+001               0.15663346E+001               0.17180964E+001               0.22786264E+001               0.26335496E+001               0.17122226E+001               0.24155116E+001
-                                     2                          1273               0.28184002E+001               0.10308187E+001               0.10378577E+001               0.65379395E+000               0.20730164E+001               0.10066305E+001               0.12476607E+001               0.13089171E+001
-                                     3                           451               0.14075763E+001               0.11516361E+001               0.65561062E+000               0.87012028E+000               0.10573497E+001               0.11006631E+001               0.10084095E+001               0.49728610E+000
+                                     0                         58738               0.24588332E+002               0.74957593E+001               0.96128519E+001               0.47922689E+001               0.15474558E+002               0.91381129E+001               0.70829507E+001               0.13396817E+002
+                                     1                          5130               0.51377720E+001               0.29394501E+001               0.40024656E+001               0.23519652E+001               0.40489744E+001               0.27870942E+001               0.22841829E+001               0.44512139E+001
+                                     2                          1465               0.36515462E+001               0.23421468E+001               0.16446917E+001               0.14876273E+001               0.18786312E+001               0.20866531E+001               0.77643654E+000               0.20179906E+001
  
         ParaDRAM - NOTE: This is the table of the Integrated Autocorrelation (IAC) of individual variables in the verbose 
         ParaDRAM - NOTE: (Markov) chain, at increasing stages of chain refinements.
@@ -1524,14 +1545,14 @@ stats.chain.refined.iac
 
 stats.chain.refined.ess
 
-        451
+        1465
  
         ParaDRAM - NOTE: This is the estimated Effective (decorrelated) Sample Size (ESS) of the final refined chain.
  
 
 stats.chain.refined.efficiency.essOverAccepted
 
-        .4510000000000000E-01
+        .1465000000000000
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted function calls, that is, the final 
         ParaDRAM - NOTE: refined effective sample size (ESS) divided by the number of accepted function calls.
@@ -1539,7 +1560,7 @@ stats.chain.refined.efficiency.essOverAccepted
 
 stats.chain.refined.efficiency.essOverAcceptedRejected
 
-        .7478898230602126E-02
+        .2494126459872655E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted and rejected function calls, that 
         ParaDRAM - NOTE: is, the final refined effective sample size (ESS) divided by the number of (accepted + rejected) 
@@ -1548,7 +1569,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejected
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
-        .7478898230602126E-02
+        .2494126459872655E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, and delayed-rejection 
         ParaDRAM - NOTE: (if any requested) function calls, that is, the final refined effective sample size (ESS) divided by 
@@ -1557,7 +1578,7 @@ stats.chain.refined.efficiency.essOverAcceptedRejectedDelayed
 
 stats.chain.refined.efficiency.essOverAcceptedRejectedDelayedUnused
 
-        .7478898230602126E-02
+        .2494126459872655E-01
  
         ParaDRAM - NOTE: This is the effective MCMC sampling efficiency given the accepted, rejected, delayed-rejection (if 
         ParaDRAM - NOTE: any requested), and unused function calls, that is, the final refined effective sample size (ESS) 
@@ -1581,7 +1602,7 @@ stats.chain.refined.length
         2000
  
         ParaDRAM - NOTE: This is the final output refined sample size. The user-requested sample size (2000) is larger than 
-        ParaDRAM - NOTE: the potentially-optimal i.i.d. sample size (451). The resulting sample likely contains duplicates 
+        ParaDRAM - NOTE: the potentially-optimal i.i.d. sample size (1465). The resulting sample likely contains duplicates 
         ParaDRAM - NOTE: and is not independently and identically distributed (i.i.d.).\nTo get the optimal size in the future 
         ParaDRAM - NOTE: runs, set sampleSize = -1, or drop it from the input list.
  
@@ -1589,13 +1610,13 @@ stats.chain.refined.length
 stats.chain.refined.avgStd
 
                           variableName                          Mean            Standard Deviation
-                           AverageLogX               0.33287591E-001               0.12262653E+000
-                           AverageLogY              -0.22376723E-001               0.56666691E-001
-                 LogStandardDeviationX               0.77230591E-002               0.44335605E-001
-                 LogStandardDeviationY               0.24974467E-001               0.22549716E-001
-                     FirsherTrans(rho)               0.69991774E+000               0.60392887E-001
-                           cutoffSlope               0.14984227E+001               0.34550239E-002
-                       cutoffIntercept              -0.21455084E-002               0.19972884E-002
+                           AverageLogX               0.31935944E-001               0.12514311E+000
+                           AverageLogY              -0.20471416E-001               0.57202279E-001
+                 LogStandardDeviationX               0.64936766E-002               0.45215063E-001
+                 LogStandardDeviationY               0.24787351E-001               0.22424344E-001
+                     FirsherTrans(rho)               0.70165183E+000               0.62238354E-001
+                           cutoffSlope               0.14983833E+001               0.35693533E-002
+                       cutoffIntercept              -0.20464134E-002               0.18900856E-002
  
         ParaDRAM - NOTE: This is the Mean and standard deviation table of the final output refined sample.
  
@@ -1603,13 +1624,13 @@ stats.chain.refined.avgStd
 stats.chain.refined.covmat
 
                                                          AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                           AverageLogX               0.15037265E-001               0.44747708E-003               0.46153814E-002              -0.71356864E-004              -0.40815491E-002               0.48314880E-005               0.14796370E-004
-                           AverageLogY               0.44747708E-003               0.32111138E-002               0.63820696E-003              -0.29500093E-003               0.21028536E-002               0.13452345E-004               0.42263519E-005
-                 LogStandardDeviationX               0.46153814E-002               0.63820696E-003               0.19656459E-002               0.11158419E-003              -0.60334211E-003               0.15464840E-005               0.41779251E-005
-                 LogStandardDeviationY              -0.71356864E-004              -0.29500093E-003               0.11158419E-003               0.50848967E-003               0.13079123E-003              -0.31459006E-005              -0.11774025E-006
-                     FirsherTrans(rho)              -0.40815491E-002               0.21028536E-002              -0.60334211E-003               0.13079123E-003               0.36473008E-002               0.42287065E-005              -0.17014461E-005
-                           cutoffSlope               0.48314880E-005               0.13452345E-004               0.15464840E-005              -0.31459006E-005               0.42287065E-005               0.11937190E-004               0.16674927E-005
-                       cutoffIntercept               0.14796370E-004               0.42263519E-005               0.41779251E-005              -0.11774025E-006              -0.17014461E-005               0.16674927E-005               0.39891611E-005
+                           AverageLogX               0.15660799E-001               0.40396214E-004               0.47537163E-002               0.10328366E-003              -0.43309467E-002               0.92392191E-005               0.17341869E-004
+                           AverageLogY               0.40396214E-004               0.32721007E-002               0.65349337E-003              -0.19562872E-003               0.23364887E-002               0.11459797E-004               0.31502166E-005
+                 LogStandardDeviationX               0.47537163E-002               0.65349337E-003               0.20444019E-002               0.18085432E-003              -0.58326403E-003               0.26260464E-005               0.45750723E-005
+                 LogStandardDeviationY               0.10328366E-003              -0.19562872E-003               0.18085432E-003               0.50285121E-003               0.14215402E-003              -0.38683572E-005              -0.17107136E-005
+                     FirsherTrans(rho)              -0.43309467E-002               0.23364887E-002              -0.58326403E-003               0.14215402E-003               0.38736127E-002               0.29135936E-005              -0.25242002E-005
+                           cutoffSlope               0.92392191E-005               0.11459797E-004               0.26260464E-005              -0.38683572E-005               0.29135936E-005               0.12740283E-004               0.27390927E-005
+                       cutoffIntercept               0.17341869E-004               0.31502166E-005               0.45750723E-005              -0.17107136E-005              -0.25242002E-005               0.27390927E-005               0.35724236E-005
  
         ParaDRAM - NOTE: This is the covariance matrix of the final output refined sample.
  
@@ -1617,13 +1638,13 @@ stats.chain.refined.covmat
 stats.chain.refined.cormat
 
                                                          AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                           AverageLogX               0.10000000E+001               0.64395945E-001               0.84892736E+000              -0.25805380E-001              -0.55113096E+000               0.11403691E-001               0.60412941E-001
-                           AverageLogY               0.64395945E-001               0.10000000E+001               0.25402768E+000              -0.23086307E+000               0.61446251E+000               0.68709866E-001               0.37341952E-001
-                 LogStandardDeviationX               0.84892736E+000               0.25402768E+000               0.10000000E+001               0.11161151E+000              -0.22533321E+000               0.10095823E-001               0.47181009E-001
-                 LogStandardDeviationY              -0.25805380E-001              -0.23086307E+000               0.11161151E+000               0.10000000E+001               0.96039914E-001              -0.40378751E-001              -0.26142259E-002
-                     FirsherTrans(rho)              -0.55113096E+000               0.61446251E+000              -0.22533321E+000               0.96039914E-001               0.10000000E+001               0.20266124E-001              -0.14105602E-001
-                           cutoffSlope               0.11403691E-001               0.68709866E-001               0.10095823E-001              -0.40378751E-001               0.20266124E-001               0.10000000E+001               0.24164182E+000
-                       cutoffIntercept               0.60412941E-001               0.37341952E-001               0.47181009E-001              -0.26142259E-002              -0.14105602E-001               0.24164182E+000               0.10000000E+001
+                           AverageLogX               0.10000000E+001               0.56431342E-002               0.84012356E+000               0.36804839E-001              -0.55605505E+000               0.20684202E-001               0.73317469E-001
+                           AverageLogY               0.56431342E-002               0.10000000E+001               0.25266478E+000              -0.15251043E+000               0.65628467E+000               0.56127287E-001               0.29137052E-001
+                 LogStandardDeviationX               0.84012356E+000               0.25266478E+000               0.10000000E+001               0.17837172E+000              -0.20726404E+000               0.16271580E-001               0.53534450E-001
+                 LogStandardDeviationY               0.36804839E-001              -0.15251043E+000               0.17837172E+000               0.10000000E+001               0.10185475E+000              -0.48330054E-001              -0.40362317E-001
+                     FirsherTrans(rho)              -0.55605505E+000               0.65628467E+000              -0.20726404E+000               0.10185475E+000               0.10000000E+001               0.13115394E-001              -0.21457752E-001
+                           cutoffSlope               0.20684202E-001               0.56127287E-001               0.16271580E-001              -0.48330054E-001               0.13115394E-001               0.10000000E+001               0.40600905E+000
+                       cutoffIntercept               0.73317469E-001               0.29137052E-001               0.53534450E-001              -0.40362317E-001              -0.21457752E-001               0.40600905E+000               0.10000000E+001
  
         ParaDRAM - NOTE: This is the correlation matrix of the final output refined sample.
  
@@ -1631,15 +1652,15 @@ stats.chain.refined.cormat
 stats.chain.refined.quantile
 
                               Quantile                   AverageLogX                   AverageLogY         LogStandardDeviationX         LogStandardDeviationY             FirsherTrans(rho)                   cutoffSlope               cutoffIntercept
-                                    Q0              -0.26955284E+000              -0.23272625E+000              -0.14562666E+000              -0.49638064E-001               0.45844893E+000               0.14829767E+001              -0.14887481E-001
-                                    Q5              -0.14145016E+000              -0.11920964E+000              -0.59421944E-001              -0.11789788E-001               0.59593684E+000               0.14921490E+001              -0.62416214E-002
-                                   Q10              -0.10797861E+000              -0.96545941E-001              -0.47309858E-001              -0.40371224E-002               0.62230238E+000               0.14941582E+001              -0.50450070E-002
-                                   Q25              -0.52183425E-001              -0.58442728E-001              -0.22568332E-001               0.94467927E-002               0.66257393E+000               0.14964632E+001              -0.29111079E-002
-                                   Q50               0.17527646E-001              -0.18787091E-001               0.43156344E-002               0.24751828E-001               0.70101520E+000               0.14988703E+001              -0.15598025E-002
-                                   Q75               0.10381342E+000               0.15128307E-001               0.35151425E-001               0.40924939E-001               0.73973668E+000               0.15009425E+001              -0.69717857E-003
-                                   Q90               0.19401118E+000               0.46444580E-001               0.65902305E-001               0.53050352E-001               0.77606265E+000               0.15021887E+001              -0.27871931E-003
-                                   Q95               0.25470112E+000               0.64479317E-001               0.85449497E-001               0.61593698E-001               0.79911953E+000               0.15030934E+001              -0.14385887E-003
-                                  Q100               0.57189406E+000               0.19328480E+000               0.21683272E+000               0.10001403E+000               0.89207241E+000               0.15112313E+001               0.12820467E-003
+                                    Q0              -0.28682308E+000              -0.23710094E+000              -0.12708460E+000              -0.61708382E-001               0.46230395E+000               0.14807340E+001              -0.18809490E-001
+                                    Q5              -0.15373673E+000              -0.11455955E+000              -0.63047833E-001              -0.11685772E-001               0.59614318E+000               0.14918093E+001              -0.58758191E-002
+                                   Q10              -0.11311976E+000              -0.94135613E-001              -0.50043057E-001              -0.41665022E-002               0.62263977E+000               0.14939603E+001              -0.45789078E-002
+                                   Q25              -0.59285784E-001              -0.59266486E-001              -0.25322931E-001               0.96756437E-002               0.66092505E+000               0.14964805E+001              -0.27739669E-002
+                                   Q50               0.16493869E-001              -0.19101223E-001               0.44712625E-002               0.25061168E-001               0.70303499E+000               0.14988923E+001              -0.15230177E-002
+                                   Q75               0.10589734E+000               0.15939439E-001               0.36336461E-001               0.39558411E-001               0.74333612E+000               0.15010092E+001              -0.71728988E-003
+                                   Q90               0.19828039E+000               0.53209401E-001               0.66557138E-001               0.53759542E-001               0.77827765E+000               0.15021930E+001              -0.26153975E-003
+                                   Q95               0.24515329E+000               0.71536603E-001               0.85692587E-001               0.62328466E-001               0.80241193E+000               0.15030117E+001              -0.11745629E-003
+                                  Q100               0.52541945E+000               0.20420540E+000               0.14743613E+000               0.10556911E+000               0.90123257E+000               0.15067960E+001               0.88414665E-004
  
         ParaDRAM - NOTE: This is the quantiles table of the variables of the final output refined sample.
  
