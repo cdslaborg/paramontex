@@ -107,10 +107,10 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-06:00) Central Time (US & Canada)
 Total Physical Memory:     65,384 MB
-Available Physical Memory: 35,843 MB
+Available Physical Memory: 40,024 MB
 Virtual Memory: Max Size:  75,112 MB
-Virtual Memory: Available: 42,414 MB
-Virtual Memory: In Use:    32,698 MB
+Virtual Memory: Available: 40,114 MB
+Virtual Memory: In Use:    34,998 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    uta.edu
 Logon Server:              \\DC-OSS-ARDC-1
@@ -148,9 +148,9 @@ Status:          Media disconnected
 [04]: Qualcomm QCA61x4A 802.11ac Wireless Adapter
 Connection Name: Wi-Fi
 DHCP Enabled:    Yes
-DHCP Server:     192.168.0.1
+DHCP Server:     129.107.35.89
 IP address(es)
-[01]: 192.168.0.177
+[01]: 10.182.27.107
 [02]: fe80::f094:d1d8:e71d:50a3
 [05]: Bluetooth Device (Personal Area Network)
 Connection Name: Bluetooth Network Connection
@@ -160,7 +160,7 @@ Connection Name: vEthernet (WSL)
 DHCP Enabled:    No
 IP address(es)
 [01]: 172.17.31.33
-[02]: fe80::f5fc:f1e0:ec1c:b4e8
+[02]: fe80::b4a7:66f4:7d01:f13d
 Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
  
  
@@ -1150,14 +1150,14 @@ delayedRejectionScaleFactorVec
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Starting the ParaDRAM sampling - 2021/09/08 - 23:20:16                                   ****
+****                                   Starting the ParaDRAM sampling - 2021/09/10 - 11:20:20                                   ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
  
 ************************************************************************************************************************************
 ****                                                                                                                            ****
-****                                   Exiting the ParaDRAM sampling - 2021/09/08 - 23:20:21                                    ****
+****                                   Exiting the ParaDRAM sampling - 2021/09/10 - 11:20:23                                    ****
 ****                                                                                                                            ****
 ************************************************************************************************************************************
  
@@ -1227,28 +1227,28 @@ stats.chain.verbose.efficiency.acceptedOverAcceptedRejectedDelayedUnused
 
 stats.time.total
 
-        4.789999961853027
+        3.088999986648560
  
         ParaDRAM - NOTE: This is the total runtime in seconds.
  
 
 stats.time.perFuncCallAccepted
 
-        .2394999980926514E-03
+        .1544499993324280E-03
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejected
 
-        .5791459063032630E-04
+        .3734826119176573E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call, in seconds.
  
 
 stats.time.perFuncCallAcceptedRejectedDelayed
 
-        .5791459063032630E-04
+        .3734826119176573E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1256,7 +1256,7 @@ stats.time.perFuncCallAcceptedRejectedDelayed
 
 stats.time.perFuncCallAcceptedRejectedDelayedUnused
 
-        .5791459063032630E-04
+        .3734826119176573E-04
  
         ParaDRAM - NOTE: This is the average effective time cost of each accepted or rejected or unused function call (including 
         ParaDRAM - NOTE: delayed-rejections, if any requested), in seconds.
@@ -1272,7 +1272,7 @@ stats.time.perInterProcessCommunication
 
 stats.time.perFuncCall
 
-        .4524347393207280E-04
+        .2884850682122406E-04
  
         ParaDRAM - NOTE: This is the average pure time cost of each function call, in seconds.
  
